@@ -33,7 +33,7 @@ The primary objective of the Patient Management System is to improve the patient
 ![Screenshot 3](path_to_screenshot_3.png)
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/your_username/patient-management-system.git`
+1. Clone the repository: `git clone https://github.com/yadavnikhilrao/Patient-Management-System-Or-Pranik-Medical-Services-PMS.git`
 2. Install the required dependencies: `pip install -r requirements.txt`
 
 ## Usage
@@ -41,12 +41,12 @@ The primary objective of the Patient Management System is to improve the patient
 2. Access the application in your web browser at: `http://localhost:5000`
 
 ## Contributing
-We welcome contributions from the community to enhance the Patient Management System. If you'd like to contribute, please follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md) and submit your pull requests.
+We welcome contributions from the community to enhance the Patient Management System. If you'd like to contribute, please submit your pull requests.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is currently not licensed. All rights reserved.
 
 ## Feedback and Suggestions
-We value your feedback and suggestions to improve the Patient Management System. Please feel free to share your thoughts and ideas through our [Contact Us](link_to_contact_us_form) form. We appreciate your input in making this platform even better and more user-friendly.
+We value your feedback and suggestions to improve the Patient Management System. Please feel free to share your thoughts and ideas through our [Contact Us](https://pranikmedicalservices.pythonanywhere.com/contact) form. We appreciate your input in making this platform even better and more user-friendly.
 
-Check out the Patient Management System [here](link_to_project_url)!
+Check out the Patient Management System [here](https://pranikmedicalservices.pythonanywhere.com)!
