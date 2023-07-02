@@ -1,4 +1,4 @@
-# Patient Management System (PMS)
+# Pranik Medical Services (PMS)
 
 ![Project Logo](./static/assets/img/logo.png)
 
