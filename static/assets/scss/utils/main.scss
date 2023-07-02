@@ -1,0 +1,93 @@
+/****** UTILS ******/
+@import "utils/variables";
+@import "utils/mixins";
+
+/******* BASE *******/
+@import "base/reset";
+@import "base/typography";
+@import "base/colors"; 
+@import "base/base";
+@import "base/grid";
+
+/******* COMPONENTS ******/
+@import "components/button";
+@import "components/cursor";
+@import "components/switch";
+
+/****** LAYOUT ******/
+@import "layout/bootstrap-classes";
+@import "layout/avatar";
+@import "layout/select2";
+@import "layout/breadcrumb";
+@import "layout/focus-label";
+@import "layout/loader";
+@import "layout/table";
+@import "layout/slick-slider";
+@import "layout/content";
+@import "layout/footer";
+@import "layout/footer-14";
+@import "layout/footer-15";
+@import "layout/footer-16";
+@import "layout/header";
+@import "layout/header-ten";
+@import "layout/header-14";
+@import "layout/header-12";
+@import "layout/header-13";
+@import "layout/header-15";
+@import "layout/header-16";
+@import "layout/nav-tabs";
+@import "layout/slider";
+@import "layout/footer-1";
+@import "layout/footer-2";
+@import "layout/footer-10";
+@import "layout/footer-12";
+@import "layout/footer-13";
+@import "layout/header-11";
+@import "layout/footer-11";
+
+/****** PAGES ******/
+@import "pages/home";
+@import "pages/blog";
+@import "pages/booking";
+@import "pages/appoitment-list";
+@import "pages/doctor-profile";
+@import "pages/doctor-dashboard";
+@import "pages/add-billing";
+@import "pages/patient-profile";
+@import "pages/patient-dashboard";
+@import "pages/chat";
+@import "pages/review";
+@import "pages/login";
+@import "pages/voice-call";
+@import "pages/map-list";
+@import "pages/search";
+@import "pages/checkout";
+@import "pages/calendar";
+@import "pages/components";
+@import "pages/invoice";
+@import "pages/terms";
+@import "pages/account";
+@import "pages/home-1";
+@import "pages/home-2";
+@import "pages/home-3";
+@import "pages/home-4";
+@import "pages/home-5";
+@import "pages/home-10";
+@import "pages/home-14";
+@import "pages/home-11";
+@import "pages/home-12";
+@import "pages/home-13";
+@import "pages/home-15";
+@import "pages/home-16";
+@import "pages/pharmacy";
+@import "pages/payment";
+@import "pages/price";
+@import "pages/about";
+@import "pages/onboard";
+@import "pages/signup";
+@import "pages/contact";
+@import "pages/error";
+@import "pages/privacy-policy";
+@import "pages/consultation";
+
+
