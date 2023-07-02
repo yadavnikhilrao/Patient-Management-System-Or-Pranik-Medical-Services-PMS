@@ -1,0 +1,335 @@
+.signup-option-btns {
+	.signup-btn-info {
+		width: $__full__width;
+		background: $__grey_400;
+		border: 1px solid $__white_shade;
+		border-radius: 8px;
+        @include margin-padding(0, 12px 15px);
+		margin-bottom: 20px;
+		@extend %flex-align-between;
+        @include transition(0.7s);
+		&:hover {
+			background: $__white;
+			border: 1px solid $__blue__14;
+			box-shadow: 0px 22px 38px rgba(0, 0, 0, 0.12);
+            @include transition(0.7s);
+			.signup-arrow {
+				background: $__blue__14;
+				color: $__white;
+                @include transition(0.4s);
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+        @include respond-below(custom991) {
+            @include margin-padding(0, 10px);
+            margin-bottom: 20px;
+        }
+	}
+}
+		
+
+.signup-info {
+	@extend %flex__center;
+	.signup-icon {
+		margin-right: 16px;
+	}
+}
+.signup-content {
+	text-align: $__left;
+	h4 {
+		font-weight: $__medium;
+		font-size: $__font__size__20;
+		margin-bottom: 6px;
+        @include respond-below(custom991) {
+            font-size: $__font__size__18;
+        }
+	}
+	p {
+		color: $__quartz_color;
+		margin-bottom: 0;
+		font-size: $__font__size__14;
+	}
+}
+.signup-arrow {
+	width: 37px;
+	height: 37px;
+	background: $__white;
+	color: $__black;
+	font-size: $__font__size__16;
+	border-radius: 50px;
+	@extend %flex-align-center;
+    @include transition(0.4s);
+}
+.terms-check-box {
+	label {
+		color: $__black_mana;
+		a {
+			color: $__emperor_grey;
+			text-decoration: $__underline;
+			&:hover {
+				color: $__blue__14;
+			}
+		}
+	}
+}
+.account-signup {
+	text-align: $__center;
+	p {
+		color: $__dimgrey_color;
+		margin-bottom: 0;
+		a {
+			font-size: $__font__size__14;
+			font-weight: $__medium;
+			color: $__blue__14;
+			text-decoration: $__underline;
+			&:hover {
+				color: $__blue__14;
+				text-decoration: $__none;
+			}
+		}
+	}
+}
+.login-verify-img {
+	padding-bottom: 50px;
+    @include respond-below(custom991) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(custom767) {
+        padding-bottom: 20px;
+    }
+}
+.otp-box {
+	.form-group {
+		@extend %flex-align-between;
+		margin-bottom: 30px;
+		@include respond-below(custom767) {
+			margin-bottom: 20px;
+		}
+	}
+	input {
+		width: 74px;
+		height: 74px;
+		background: $__platinum;
+		border: 2px solid $__silver_chalice;
+		border-radius: 8px;
+		text-align: $__center;
+		margin-right: 15px;
+		font-weight: $__bold;
+		font-size: $__font__size__26;
+		color: $__black;
+		outline: $__none;
+		&:last-child {
+			margin-right: 0;
+		}
+		@include respond-below(custom991) {
+			width: 68px;
+			height: 68px;
+		}
+		@include respond-below(custom767) {
+			width: 60px;
+			height: 60px;
+			font-size: $__font__size__24;
+		}
+	}
+}
+.otp-info {
+	@extend %flex-align-between;
+	padding-bottom: 20px;
+    @include respond-below(custom767) {
+		padding-bottom: 0;
+	}
+}
+.otp-code {
+	p {
+		color: $__zambesi_grey;
+		margin-bottom: 8px;
+	}
+	a {
+		font-weight: $__medium;
+		color: $__blue__14;
+		text-decoration: $__underline;
+		&:hover {
+			text-decoration: $__none;
+		}
+	}
+}
+.otp-sec {
+	p {
+		background: $__platinum;
+		border-radius: 4px;
+		color: $__sonic_silver;
+		padding: 4px 7px;
+		@extend %inlineflex-align-center;
+		i {
+			font-size: $__font__size__16;
+			margin-right: 6px;
+		}
+	}
+}
+.forgot-link {
+	font-weight: $__medium;
+	text-decoration: $__underline;
+	color: $__blue__14;
+	margin-bottom: 10px;
+	@include transition(0.7s);
+	&:hover {
+		color: $__black;
+		text-decoration: $__underline;
+		@include transition(0.7s);
+	}
+}
+.form-group-flex {
+	@extend %flex-align-between;
+}
+.signup-code {
+	font-size: $__font__size__11;
+	color: $__tone_grey;
+	@include margin-padding(7px 0 0 0, 0);
+}
+.multistep-form {
+	#first {
+		display: $__block;
+	}
+	fieldset {
+		display: $__none;
+		width: $__full__width;
+	}
+}
+.widget-setcount {
+	padding-bottom: 40px;
+	ul {
+		@include margin-padding(0, 0);
+		@extend %display-flex;
+		@extend %flex__between;
+		@extend %flex__wrap;
+		list-style: $__none;
+		li {
+			margin-right: 0;
+			margin-bottom: 10px;
+			position: $__relative;
+			&:last-child {
+				margin-right: 0;
+				&:before {
+					display: $__none;
+				}
+			}
+			&:before {
+				@include position($__absolute, 50%, -66px, null, null);
+				content: "";
+				width: 50px;
+				height: 2px;
+				background: $__chinse_white;
+			}
+		}
+		.progress-activated {
+			&:before {
+				background: $__blue__14;
+			}
+		}
+	}
+	.step-box {
+		@extend %flex-align-center;
+	}
+	.step-icon {
+		width: 45px;
+		height: 45px;
+		background: $__arc_light;
+		border-radius: 50px;
+		margin-right: 15px;
+		@extend %flex-align-center;
+	}
+	.step-content {
+		p {
+			color: $__chinse_white;
+			margin-bottom: 5px;
+		}
+		h4 {
+			font-weight: $__medium;
+			font-size: $__font__size__16;
+			color: $__chinse_white;
+			margin-bottom: 0;
+		}
+	}
+	.progress-activated {
+		.step-icon {
+			background: $__blue__14;
+		}
+		.step-content {
+			p {
+				color: $__granite;
+			}
+			h4 {
+				color: $__black;
+			}
+		}
+	}
+	.progress-active {
+		.step-icon {
+			background: $__blue__14;
+		}
+		.step-content {
+			p {
+				color: $__granite;
+			}
+			h4 {
+				color: $__black;
+			}
+		}
+	}
+}
+
+.form-check-box .custom_check {
+	margin-bottom: 0;
+}
+.form-check-box .custom_check .checkmark::after {
+	content: "";
+	background: $__blue__14;
+    width: 12px;
+    height: 12px;
+    top: 3px;
+    left: 3px;
+    border-radius: 3px;
+}
+/*.custom_check {
+	color: $__congo_brown;
+	display: $__inline__block;
+	position: $__relative;
+	font-size: $__font__size__14;
+	padding-left: 30px;
+	margin-bottom: 10px;
+	cursor: $__pointer;
+	user-select: $__none
+}
+.custom_check input {
+	position: $__absolute;
+	opacity: 0;
+	cursor: $__pointer;
+}
+.custom_check input:checked ~ .checkmark {
+	background-color: $__white;
+	border-color: $__misty_rose;
+}
+.custom_check .checkmark {
+	@include position($__absolute, 0, null, null, 0);
+	height: 20px;
+	width: 20px;
+	border: 1px solid $__white_shade;
+	background-color: $__white;
+	border-radius: 3px;
+	@include transition(all 0.3s ease-in-out);
+}
+.custom_check .checkmark::after {
+    content: "\f00c";
+    font-family: $__fontawesome__family;
+    font-weight: $__bolder;
+	@include position($__absolute, 50%, null, null, 4px);
+    display: $__none;
+    color: $__blue__14;
+    font-size: $__font__size__12;
+}
+.custom_check input:checked ~ .checkmark:after {
+	display: $__block;
+}
+*/

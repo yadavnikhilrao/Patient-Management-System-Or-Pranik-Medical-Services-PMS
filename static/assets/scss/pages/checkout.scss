@@ -1,0 +1,156 @@
+.info-widget {
+    border-bottom: 1px solid $__light-silver;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.card-label {
+	& > label {
+		background-color: $__white;
+	    color: $__battleship__gray;
+	    display: $__inline__block;
+	    font-size: $__font__size__13;
+	    font-weight: $__medium;
+	    @include margin-padding(6px auto auto 8px, 0 7px);
+	    @include respond-below(custom991) {
+	    	font-size: $__font__size__12;
+	    }
+	}
+	& > input {
+		background-color: $__white;
+	    border: 1px solid $__beige;
+	    @include box-shadow(null, 0, 1px, 3px, 0, rgba(0, 0, 0, .05));
+	    display: $__block;
+	    height: 50px;
+	    margin-top: -13px;
+	    @include transition(border-color .3s);
+	    width: $__full__width;
+	    @include rounded(4px);
+	    @include margin-padding(null, 5px 15px 0);
+	}
+}
+.exist-customer {
+	a {
+		color: $__sky__blue;
+		font-weight: $__medium;
+	}
+}
+.payment-widget {
+	.payment-list {
+		& + .payment-list {
+			margin-bottom: 15px;
+		}
+	}
+}
+.payment-radio {
+    display: $__block;
+    position: $__relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: $__pointer;
+    font-size: $__font__size__16;
+    @extend %user-none;
+    font-weight: $__bold;
+    color: $__dark__blue;
+    text-transform: $__capitalize;
+    input {
+	    position: $__absolute;
+	    opacity: 0;
+	    cursor: $__pointer;
+	    height: 0;
+	    width: 0;
+	}
+	.checkmark {
+	    width: 19px;
+	    height: 19px;
+	    border: 2px solid $__light__goose;
+	    @include rounded(50%);
+	    @include transition(all .3s);
+	    @include margin-padding(3px 0 0 0, null);
+	    @include position($__absolute, 0, null, null, 0);
+	    &::after {
+		    content: '';
+		    width: 9px;
+		    height: 9px;
+		    background-color: $__sky__blue;
+		    opacity: 0;
+		    visibility: $__hidden;
+		    @include transform(scale(0.1));
+		    @include rounded(50%);
+		    @include transition(all .3s);
+		    @include position($__absolute, 3px, null, null, 3px);
+		}
+	}
+	input {
+		&:checked ~ .checkmark {
+		    border-color: $__sky__blue;
+		    &::after {
+			    opacity: 1;
+			    visibility: $__visible;
+			    @include transform(scale(1));
+			}
+		}
+	}
+}
+.booking-date {
+    list-style: $__none;
+    @include margin-padding(null, 0);
+    li {
+	    position: $__relative;
+	    font-size: $__font__size__14;
+	    font-weight: $__medium;
+	    color: $__dark__blue;
+	    text-transform: $__capitalize;
+	    margin-bottom: 15px;
+	    span {
+		    float: $__right;
+		    color: $__smokey-gray;
+		    font-weight: $__regular;
+		    font-size: $__font__size__15;
+		}
+	}
+}
+.booking-fee {
+    list-style: $__none;
+    @include margin-padding(null, 0);
+    li {
+	    position: $__relative;
+	    font-size: $__font__size__14;
+	    font-weight: $__medium;
+	    color: $__dark__blue;
+	    text-transform: $__capitalize;
+	    margin-bottom: 15px;
+	    span {
+		    float: $__right;
+		    color: $__smokey-gray;
+		    font-weight: $__regular;
+		    font-size: $__font__size__15;
+		}
+	}
+}
+.booking-total {
+    border-top: 1px solid $__light__beige;
+    margin-top: 20px;
+    padding-top: 20px;
+    ul {
+		list-style: $__none;
+		@include margin-padding(0, 0);
+		li {
+			span {
+				font-size: $__font__size__18;
+			    font-weight: $__bold;
+			    color: $__dark__blue;
+			    @include respond-below(custom767) {
+			    	font-size: $__font__size__14;
+			    }
+			}
+			.total-cost {
+			    color: $__sky__blue;
+			    font-size: $__font__size__16;
+			    float: $__right;
+			    @include respond-below(custom767) {
+			    	font-size: $__font__size__14;
+			    }
+			}
+		}
+	}
+}

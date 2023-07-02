@@ -1,0 +1,399 @@
+.consultation-info {
+	padding-bottom: 25px;
+	p {
+		font-weight: $__medium;
+		font-size: $__font__size__16;
+        color: $__black;
+		margin-bottom: 20px;
+		@include respond-below(custom991) {
+            margin-bottom: 15px;
+        }
+	}
+}
+.consultation-list {
+	ul {
+        @include margin-padding(0, 0);
+		list-style: $__none;
+		li {
+			display: $__block;
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.consultation-types {
+	@extend %flex__center;
+	a {
+		font-weight: $__medium;
+		font-size: $__font__size__16;
+		color: $__dove_grey;
+		background: $__white;
+		border: 1px solid $__light_grey;
+		border-radius: 6px;
+		min-width: 413px;
+        @include margin-padding(0, 10px 15px);
+		@extend %flex-align-center;
+		&:hover {
+			color: $__blue__14;
+			background: $__white;
+			border: 1px solid $__blue__14;
+		}
+		i {
+			font-size: $__font__size__18;
+			margin-right: 10px;
+		}        
+        @include respond-below(custom991) {
+            min-width: 300px;
+        }
+        @include respond-below(custom767) {
+            font-size: $__font__size__14;
+            min-width: 250px;
+            @include margin-padding(0, 7px 15px);
+        }
+	}
+	span {
+		margin-left: 18px;
+		font-size: $__font__size__20;
+		color: $__green;
+		display: $__none;
+	}	
+	&.active {
+		a {
+			color: $__blue__14;
+			background: $__white;
+			border: 1px solid $__blue__14;
+			box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.07);
+		}
+		span {
+			display: $__block;
+		}
+	}
+}
+.booking-doctor-details {
+	@extend %flex-align-between;
+}
+.booking-device {
+	@extend %display-flex;
+}
+.booking-device-img {
+	margin-right: 15px;
+}
+.booking-doctor-info {
+	h3 {
+		font-weight: $__medium;
+		font-size: $__font__size__16;
+		margin-bottom: 5px;
+	}
+	.device-text {
+		margin-bottom: 12px;
+	}
+	.btn {
+		font-weight: $__medium;
+		font-size: $__font__size__14;
+        @include margin-padding(0, 4px 10px);
+		min-width: 109px;
+		color: $__blue__14;
+		background: $__white;
+		border: 2px solid $__blue__14;
+		box-shadow: inset 0 0 0 0 $__blue__14;
+		border-radius: 6px;
+        @include transition(0.7s);
+		&:hover {
+			color: $__white;
+			background: $__blue__14;
+			box-shadow: inset 0 0 0 50px $__blue__14;
+			border: 2px solid $__blue__14;
+            @include transition(0.7s);
+		}
+	}
+}
+.app-images a {
+	margin-right: 8px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.booking-date {
+	@extend %flex__center;
+	padding-bottom: 30px;
+	p {
+		color: $__grey_600;
+        @include margin-padding(0 10px 0 0, 0);
+		margin-right: 10px;
+		margin-bottom: 0;
+        @include respond-below(custom767) {
+            @include margin-padding(0 0 10px 0, 0);
+        }
+	}
+    @include respond-below(custom767) {
+        display: $__block;
+        padding-bottom: 20px
+    }
+}
+.time-slot-card-body {
+    @include respond-below(custom767) {
+        padding-bottom: 0 !important;
+    }
+}
+.booking-range {
+	.btn {
+		background: $__white;
+		border: 1px solid $__white_shade;
+		border-radius: 6px;
+		font-size: $__font__size__14;
+		font-weight: $__normal;
+		color: $__grey_dark;
+        @include margin-padding(0, 10px 15px);
+		@extend %flex__center;
+        @include respond-below(custom767) {
+            font-size: $__font__size__13;
+            @include margin-padding(0, 10px);
+            position: $__relative;
+        }
+	}
+	img {
+		margin-right: 10px;
+	}
+	i {
+		font-size: $__font__size__16;
+		margin-left: 10px;
+		color: $__zambesi_grey;
+	}
+}
+.booking-card {
+	border: 2px solid $__grey_whitish;
+	border-radius: 8px;
+	margin-bottom: 25px;
+}
+.booking-date-slider {
+	padding-bottom: 30px;
+}
+.date-slider {
+	text-align: $__center;
+	list-style: $__none;
+    @include margin-padding(0, 0);
+	.slick-slide {
+		display: $__block;
+        @include margin-padding(0, 0 5px);
+	}
+	li {
+		h4 {
+			font-weight: $__medium;
+			font-size: $__font__size__16;
+			color: $__babe_grey;
+			margin-bottom: 5px;
+            @include respond-below(custom1199) {
+                font-size: $__font__size__13;
+            }
+            @include respond-below(custom991) {
+                font-size: $__font__size__16;
+            }
+		}
+		p {
+			color: $__darkish_grey;
+			margin-bottom: 0;
+		}
+		&.active {
+			h4 {
+				color: $__black
+			}
+			p {
+				color: $__silver_grey;
+			}
+		}
+	}
+	.slick-prev {
+		&:before {
+			content: ' \e92f';
+		}
+	}
+	.slick-next {
+		&:before {
+			content: ' \e930';
+		}
+	}
+}
+.date-slider .slick-prev, 
+.date-slider .slick-next {
+	background: $__transparent;
+	color: $__black;
+	line-height: $__normal;
+}
+.date-slider .slick-prev:hover,
+.date-slider .slick-prev:focus,
+.date-slider .slick-next:hover,
+.date-slider .slick-next:focus {
+	background-color: $__transparent;
+	color: $__primarycolor;
+	opacity: 1;
+}
+.date-slider .slick-prev:hover:before, 
+.date-slider .slick-prev:focus:before, 
+.date-slider .slick-next:hover:before, 
+.date-slider .slick-next:focus:before {
+	color: $__primarycolor;
+}
+.date-slider .slick-prev:before, 
+.date-slider .slick-next:before {
+	font-family: "feather";
+	font-size: $__font__size__26;
+}
+.time-slot {
+	text-align: $__center;
+	h4 {
+		font-weight: $__medium;
+		font-size: $__font__size__16;
+		margin-bottom: 20px;
+	}
+	ul {
+		list-style: $__none;
+        @include margin-padding(0, 0);
+		li {
+			display: $__block;
+			margin-bottom: 15px;
+		}
+	}
+	li {
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.timing {
+			background: $__grey_400;
+			border: 2px solid $__white_smoke;
+			border-radius: 8px;
+			color: $__davy_grey;
+			@include margin-padding(0, 10px 15px);
+			text-align: $__center;
+			position: $__relative;
+			@extend %flex-align-center;
+			box-shadow: inset 0 0 0 0 $__white;
+            @include transition(0.7s);
+			&:hover {
+				background: $__white;
+				box-shadow: inset 0 0 0 50px $__white;
+                @include transition(0.7s);
+			}
+			&.active {
+				background: $__primarycolor;
+				border: 2px solid $__primarycolor;
+				color: $__white;
+				box-shadow: inset 0 0 0 0 $__primarycolor;
+				&:hover {
+					background: $__primarycolor;
+					border: 2px solid $__primarycolor;
+					color: $__white;
+					box-shadow: inset 0 0 0 50px $__primarycolor;
+				}
+			}
+			i {
+				margin-right: 4px;
+			}
+		}
+		.load-more-timings {
+			a {
+				font-weight: $__medium;
+				text-decoration: $__underline;
+				color: $__primarycolor;
+				&:hover {
+					color: $__black;
+				}
+			}
+		}
+	}
+	.time-slot-open {
+		display: $__none;
+	}
+    @include respond-below(custom991) {
+        padding-bottom: 15px;
+    }
+}
+.success-content {
+	text-align: $__center;
+	padding-bottom: 40px;
+    h4 {
+        font-weight: $__medium;
+        font-size: $__font__size__18;
+        margin-bottom: 0;
+        @include respond-below(custom991) {
+            font-size: $__font__size__16;
+        }
+    }
+    @include respond-below(custom991) {
+        padding-bottom: 30px;
+    }
+}
+.success-icon {
+	padding-bottom: 15px;
+    i {
+        font-size: $__font__size__50;
+        color: $__green;
+        @include respond-below(custom991) {
+            font-size: $__font__size__36;
+        }
+    }
+}
+.booking-success-info {
+	padding-bottom: 20px;
+	.booking-doctor-img {
+		width: 90px;
+		height: 90px;
+		border-radius: 10px;
+		margin-right: 15px;
+		img {
+			width: 90px;
+			height: 90px;
+			border-radius: 10px;
+		}
+	}
+	.booking-doctor-info {
+		p {
+			margin-bottom: 15px;
+		}
+	}
+}
+.success-btn {
+	text-align: $__center;
+	padding-bottom: 25px;
+	.btn {
+		@extend %display-inline-flex;
+		font-weight: $__medium;
+		padding: 8px 18px;
+        @include respond-below(custom767) {
+            display: $__flex;
+        }
+	}
+	.btn-primary {
+		margin-right: 15px;
+        @include respond-below(custom767) {
+            @include margin-padding(0 0 10px 0, 8px 18px);
+        }
+	}
+	.btn-light {
+		color: $__fog_silver;
+		background: $__grey_400;
+	}
+}
+.success-dashboard-link {
+	text-align: $__center;
+	a {
+		@extend %flex__inlinecenter;
+		font-weight: $__medium;
+		font-size: $__font__size__15;
+		color: $__nickel_color;
+		&:hover {
+			color: $__blue__14;
+		}
+		i {
+			margin-right: 12px;
+			font-size: $__font__size__16;
+		}
+        @include respond-below(custom767) {
+            font-size: $__font__size__14;
+        }
+	}
+}
+
+
+

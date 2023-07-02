@@ -1,0 +1,202 @@
+.full-slide-home {
+    background: $__metallic-silver;
+    .slick-prev {
+        left: 30px;
+    }
+    .slick-next {
+        right: 30px;
+    }
+    .slick-slide {
+        & > div {
+            & >.col-12 {
+                @extend %display-flex;
+			    @extend %flex-wrap;
+            }
+        }
+        .slide-image {
+            width: $__full__width;
+            min-height: 358px;
+            justify-content: $__center;
+            flex-direction: $__column;
+            padding: 70px 50px 70px 100px;
+            vertical-align: $__middle;
+            background-position: $__right;
+            background-size: contain;
+            @extend %display-flex;
+            h2 {
+                font-size: $__font__size__36;
+                font-weight: $__medium;
+            }
+            .slide-ul {
+                li {
+                    color: $__smokey-gray;
+                    font-size: $__font__size__13;
+                    &:before {
+                        font-family: "Font Awesome 5 Free";
+                        display: $__inline__block;
+                        padding-right: 6px;
+                        vertical-align: $__middle;
+                        content: "\f192";
+                        color: $__gray__smoke;
+                        font-size: $__font__size__10;
+                   }	
+                }
+            }
+        }
+    }
+}
+.section-search-pharmacy {
+	min-height: $__inherit !important;
+	background: $__white;
+	padding: 40px 0;
+    .banner-wrapper2 {
+        margin: 0 $__auto;
+        max-width: 680px;
+        width: $__full__width;
+        .search-box1 {
+            form {
+                @extend %flex-wrap;
+                @extend %flex-align-center;
+            }
+            .search-location1 {
+                margin-right: 12px;
+                position: $__relative;
+                width: 400px;
+                margin-bottom: 0;
+            }
+            .form-control {
+                border: 1px solid $__goose-gray;
+                box-shadow: inset 0 0px 0px rgb(0 0 0 / 8%);
+                border-radius: 5px;
+                padding-left: 35px;
+            }
+            .search-detect {
+                padding: 5px 9px 5px 28px;
+                font-size: $__font__size__13;
+                color: $__smokey-gray;
+                border-radius: 5px;
+                background: $__metallic-silver url(../img/google-map.png) no-repeat 9px $__center;
+                cursor: $__pointer;
+                @include position($__absolute, 8px, 5px, null, null);
+            }
+            .search-btn {
+                width: 46px;
+                -ms-flex: 0 0 46px;
+                flex: 0 0 46px;
+                height: 46px;
+                margin: 0;
+                span {
+                    display: $__none;
+                    font-weight: $__medium;
+                }
+            }
+        }
+    }
+}
+.doctor-img1 {
+    margin-right: 20px;
+}
+.doc-info-right {
+    .clinic-booking {
+        a {
+            padding: 10px 15px;
+        }
+    }
+}
+.pharmacy-location, 
+.pharmacy-title {
+	color: $__dark-blue;
+}
+.custom-short-by {
+    .sort-title {
+        color: $__dark-blue;
+    }
+    & > div {
+        margin-right: 20px;
+        &:first-child {
+            margin-right: 0;
+        }
+    }
+}
+.product-custom {
+    span {
+        &.price{
+            font-size: $__font__size__20;
+            font-weight: $__medium;
+        }
+        &.price-strike{
+            font-weight: $__regular;
+            text-decoration: line-through;
+            color: $__gray__cloud;	
+        }
+    }
+    .cart-icon{
+        font-size: $__font__size__18;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        float: $__right;
+        @extend %flex-align-center;
+    }
+    .profile-widget {
+        &:hover {
+            .cart-icon{
+                color: $__white;
+                background-color: $__celeste;
+            }
+        }
+    }
+}
+.product-description {
+    .doctor-img1{
+        width: 40%;
+    }
+    .doc-info-cont{
+        width: 60%;
+    }
+}
+.clini-infos {
+    h2 {
+        b {
+            &.strike {
+                text-decoration: line-through;
+                font-weight: $__medium;
+            }
+        }
+    }
+}
+.feature-product {
+    span{
+        padding-bottom: 10px;
+        display: $__inline__block;
+    }
+    ul {
+        li {
+            padding: 3px 0;
+        }
+    }
+}
+ul {
+    &.benifits-col {
+        li {
+            i {
+                font-size: $__font__size__20;
+                margin-right: 20px;
+                color: $__sky__blue;
+            }
+        }
+    }
+}
+.booking-date {
+    li {
+        span {
+            text-align: $__right;
+            a {
+                color: $__sky__blue;
+                font-size: $__font__size__13;
+                width: $__full__width;
+                display: $__inline__block;
+            }
+        }
+    }
+} 

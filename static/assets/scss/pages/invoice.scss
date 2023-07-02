@@ -1,0 +1,96 @@
+.invoice-content {
+    background-color: $__white;
+	border: 1px solid $__light-silver;
+    margin-bottom: 30px;
+	@include rounded(4px);	
+	@include margin-padding(null, 30px);
+	@include respond-below(custom575) {
+		@include margin-padding(null, 1.25rem);
+	}
+}
+.invoice-item {
+	.invoice-logo {
+	    margin-bottom: 30px;
+	    img {
+		    width: $__auto;
+		    max-height: 52px;
+		}
+	}
+	.invoice-text {
+		padding-top: 42px;
+		padding-bottom: 36px;
+		h2 {
+			color: $__dark__blue;
+			font-size: $__font__size__36;
+			font-weight: $__semibold;
+		}
+	}
+	.invoice-details {
+		text-align: $__right;
+		color: $__smokey-gray;
+		font-weight: $__medium;
+		@include respond-below(custom767) {
+			text-align: $__left;
+		}
+		strong {
+			color: $__dark__blue;
+		}
+	}
+	.invoice-details-two {
+		text-align: $__left;
+	}
+	.customer-text {
+		font-size: $__font__size__18;
+		color: $__dark__blue;
+		font-weight: $__bold;
+		margin-bottom: 8px;
+		display: $__block;
+		@include respond-below(custom767) {
+			font-size: $__font__size__16;
+		}
+	}
+}
+.invoice-info {
+	margin-bottom: 30px;
+	p {
+		margin-bottom: 0;
+	}
+	&.invoice-info2 {
+	    text-align: $__right;
+	    @include respond-below(custom767) {
+			text-align: $__left;
+		}
+	}
+	h5 {
+	    font-size: $__font__size__16;
+	    font-weight: $__medium;
+	}
+}
+.invoice-table, .invoice-table-two {
+	tr {
+		th, td {
+			color: $__dark__blue;
+			font-weight: $__bold;
+			line-height: $__inherit;
+			@include margin-padding(null, 10px 20px);
+		}
+		td {
+			color: $__smokey-gray;
+			font-weight: $__medium;
+		}
+	}
+}
+.invoice-table-two {
+	margin-bottom:0;
+	tr {
+		th, td {
+			border-top: 0;
+		}
+		td {
+			text-align: $__right;
+		}
+	}
+}
+.other-info {
+    margin-top: 10px;
+}

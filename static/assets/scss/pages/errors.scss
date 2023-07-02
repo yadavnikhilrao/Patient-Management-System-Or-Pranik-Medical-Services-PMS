@@ -1,0 +1,103 @@
+.error-section {
+    @include margin-padding(0, 80px 0);
+    @include respond-below(custom991) {
+        @include margin-padding(0, 40px 0);
+    }
+}
+.error-img {
+	padding-bottom: 50px;
+    @include respond-below(custom767) {
+        padding-bottom: 25px;
+    }
+}
+.error-404-img {
+	position: $__relative;
+}
+.error-404-content {
+	width: $__full__width;
+    @include position($__absolute, null, null, 30px, null);
+    @include respond-below(custom1399) {
+        bottom: 0;
+    }
+    @include respond-below(custom767) {
+        position: $__static;
+        margin-top: 20px;
+    }
+}
+.error-content {
+	h2 {
+		font-weight: $__semibold;
+		font-size: $__font__size__38;
+		color: $__black_shade;
+		margin-bottom: 10px;
+        @include respond-below(custom991) {
+            font-size: $__font__size__32;
+        }
+        @include respond-below(custom767) {
+            font-size: $__font__size__22;
+        }
+	}
+	p {
+		font-weight: $__medium;
+		font-size: $__font__size__16;
+		color: $__bodycolor;
+		margin-bottom: 40px;
+        @include respond-below(custom767) {
+            font-size: $__font__size__14;
+            margin-bottom: 20px;
+        }
+	}
+	.btn {
+		@extend %display-inline-flex;
+		min-width: 246px;
+		font-size: $__font__size__18;
+        display: $__inline__block;
+        @include margin-padding(0, 13px 15px);
+        @include respond-below(custom991) {
+            min-width: 230px;
+            font-size: $__font__size__16;
+            @include margin-padding(0, 10px 15px);
+        }
+        @include respond-below(custom767) {
+            min-width: 150px;
+            font-size: $__font__size__14;
+            @include margin-padding(0, 8px 15px);
+        }
+	}
+}
+.coming-soon-info {
+	@extend %flex-align-center;
+}
+.coming-soon-count {
+	width: 104px;
+	height: 104px;
+    @include margin-padding(0 16px 0 0, 13px);
+	border-radius: 50px;
+	background: $__cyan_color;
+	flex-shrink: 0;
+	&:last-child {
+		margin-right: 0;
+	}
+	h4 {
+		font-weight: $__semibold;
+		font-size: $__font__size__40;
+		color: $__white;
+		margin-bottom: 0;
+        @include respond-below(custom767) {
+            font-size: $__font__size__20;
+        }
+	}
+	p {
+		font-size: $__font__size__18;
+		color: $__white;
+		margin-bottom: 0;
+        @include respond-below(custom767) {
+            font-size: $__font__size__13;
+        }
+	}
+    @include respond-below(custom767) {
+        width: 66px;
+        height: 66px;
+        @include margin-padding(0 10px 0 0, 8px);
+    }
+}

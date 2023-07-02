@@ -1,0 +1,24 @@
+.account-card {
+	border-radius: 10px;
+    font-size: $__font__size__16;
+    text-align: $__center;
+    @include margin-padding(0 0 30px, 10px);
+    span {
+        font-size: $__font__size__24;
+        display: $__block;
+        margin-bottom: 5px;
+        font-weight: $__medium;
+    }
+}
+.info-list {
+	margin-bottom: 10px;
+    .title {
+        color: $__dark__blue;
+        font-weight: $__medium;
+    }
+    .text {
+        color: $__smokey-gray;
+        display: $__block;
+        overflow: $__hidden;
+    }
+}

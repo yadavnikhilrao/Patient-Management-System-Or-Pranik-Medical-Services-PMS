@@ -1,0 +1,117 @@
+.comp-header {
+    margin-bottom: 1.875rem;
+    .comp-title {
+	    color: $__dark__blue;
+	}
+}
+.line {
+    background-color: $__sky__blue;
+    height: 2px;
+    margin: 0;
+    width: 60px;
+}
+.comp-buttons {
+	.btn {
+		margin-bottom: 5px;
+	}
+}
+.pagination-box {
+	.pagination {
+		margin-top: 0;
+	}
+}
+.comp-dropdowns {
+	.btn-group {
+		margin-bottom: 5px;
+	}
+}
+.progress-example {
+	.progress {
+		margin-bottom: 1.5rem;
+	}
+}
+.progress-xs {
+	height: 4px;
+}
+.progress-sm {
+	height: 15px;
+}
+.progress-lg {
+	.page-link {
+		@include respond-below(custom575) {
+			font-size: $__font__size__16;
+			@include margin-padding(null, 0.5rem 0.625rem);
+		}
+	}
+}
+.progress {
+	&.progress-sm {
+		height: 6px;
+	}
+	&.progress-md {
+		height: 8px;
+	}
+	&.progress-lg {
+		height: 18px;
+	}
+}
+.row {
+	&.row-sm {
+	    margin-left: -3px;
+    	margin-right: -3px;
+		& > div {
+    		padding-left: 3px;
+    		padding-right: 3px;
+    	}
+    }
+}
+.pagination-lg {
+	.page-link {
+		@include respond-below(custom575) {
+		    font-size: $__font__size__16;
+		    @include margin-padding(null, 0.5rem 0.625rem);
+		}
+	}
+}
+.custom-edit-service {
+ 	textarea.form-control {
+    	min-height: 200px;
+	}
+	.service-upload {
+		border: 1px solid $__light-gray;
+		border-radius: .25rem;
+		text-align: $__center;
+		background-color: $__white;
+		position: $__relative;
+		@include margin-padding(0 0 30px, 70px 0);
+		i {
+			font-size: $__font__size__50;
+			color: $__granite;
+		}
+		span {
+			font-size: $__font__size__15;
+			color: $__granite;
+			margin-top: 14px;
+			display: $__block;
+		}
+		input[type="file"] {
+			width: $__full__width;
+			height: $__full__height;
+			opacity: 0;
+			cursor: $__pointer;
+			@include position($__absolute, 0, null, null, 0);
+		}
+	}
+}
+
+.upload-wrap {
+	@extend %equal-heights;
+	@extend %ul_reset;
+	li {
+		margin: 10px;
+		list-style: none;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

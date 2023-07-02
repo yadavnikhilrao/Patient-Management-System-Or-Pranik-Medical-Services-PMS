@@ -1,0 +1,85 @@
+.terms-section {
+    @include margin-padding(0, 80px 0);
+    @include respond-below(custom991) {
+        @include margin-padding(0, 40px 0);
+    }
+    .terms-content {
+        padding-bottom: 50px;
+        .terms-text {
+            padding-bottom: 24px;
+            &:last-child {
+                padding-bottom: 0;
+            }
+            p {
+                font-size: $__font__size__16;
+                color: $__bodycolor;
+                margin-bottom: 24px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                @include respond-below(custom767) {
+                    font-size: $__font__size__14;
+                    margin-bottom: 20px
+                }
+            }            
+            &.terms-list {
+                p {
+                    @extend %display-inline-flex;
+                    @extend %align__start;
+                    margin-bottom: 10px;
+                    i {
+                        position: $__relative;
+                        top: 4px;
+                        margin-right: 8px;
+                        color: $__blue__14;
+                    }
+                }
+            }
+        }
+        @include respond-below(custom991) {
+            padding-bottom: 30px;
+        }
+    }
+}
+.terms-btn {
+	.btn {
+		@extend %inlineflex-align-center;
+	}
+	.btn-right-now {
+		font-weight: $__medium;
+		font-size: $__font__size__16;
+        @include margin-padding(0 15px 0 0, 5px 15px);
+		min-width: 149px;
+		border-radius: 8px;
+		color: $__mine_grey;
+		background: $__white_smoke;
+		border: 1px solid $__white_smoke;
+		box-shadow: inset 0 0 0 0 $__blue__14;
+        @include transition(0.7s);
+		&:hover {
+			color: $__white;
+			background: $__blue__14;
+			border-color: $__blue__14;
+			box-shadow: inset 0 0 0 50px $__blue__14;
+            @include transition(0.7s);
+		}
+        @include respond-below(custom767) {
+            font-size: $__font__size__14;
+            min-width: 130px;
+            margin-right: 0;
+        }
+	}
+	.btn-primary {
+		padding: 5px 15px;
+		min-width: 166px;
+		font-weight: $__semibold;
+        @include respond-below(custom767) {
+            min-width: 150px;
+        }
+	}
+    @include respond-below(custom767) {
+        display: $__flex;
+        align-items: $__center;
+        justify-content: $__space_between;
+    }
+}

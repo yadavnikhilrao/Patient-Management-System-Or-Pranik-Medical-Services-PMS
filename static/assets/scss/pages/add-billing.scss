@@ -1,0 +1,47 @@
+.biller-info, .billing-info {
+	margin-bottom: 15px;
+}
+.add-more-item {
+	margin-bottom: 10px;
+	a {
+		color: $__celeste;
+		font-weight: $__medium;
+	}
+}
+.signature-wrap {
+    float: $__right;
+    margin-bottom: 20px;
+    text-align: $__center;
+    width: 220px;
+}
+.signature {
+    border: 2px dashed $__goose-gray;
+	color: $__dark__blue;
+	cursor: $__pointer;
+    height: 85px;
+	margin-bottom: 15px;
+    width: $__full__width;
+	@extend %align-items-center;
+    @include rounded(4px);
+    @extend %flex-align-center;
+    &:hover {
+	    background-color: $__water__white;
+	}
+	.sign-name {
+		width: $__full__width;
+		float: $__right;
+	}
+}
+.pat-widget-profile {
+	.pro-widget-content {
+		@include margin-padding(null, 0 0 20px);
+	}
+	.booking-date {
+		li {
+			font-size: $__font__size__14;
+			span {
+			    font-size: $__font__size__14;
+			}
+		}
+	}
+}

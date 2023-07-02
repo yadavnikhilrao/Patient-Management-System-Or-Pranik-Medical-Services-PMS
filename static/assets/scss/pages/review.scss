@@ -1,0 +1,16 @@
+.doc-review {
+	&.review-listing {
+		@include margin-padding(0, null);
+	}
+}
+.review-listing {
+	&.doc-review {
+		& > ul {
+			& > li {
+				background-color: $__white;
+				border: 1px solid $__light-silver;
+				@include margin-padding(null, 20px);
+			}
+		}
+	}
+}

@@ -1,0 +1,126 @@
+.widget-profile {
+    background-color: $__white;
+    border-bottom: 1px solid $__light-silver;
+    .profile-info-widget {
+		display: $__block !important;
+		text-align: $__center !important;
+		.booking-doc-img {
+		    display: $__inline__block;
+		    width: $__auto;
+		    background-color: $__mix__gray;
+		    @include margin-padding(0 0 15px !important, 8px);
+		    @include rounded(50%);
+		    img {
+			    height: 120px !important;
+			    width: 120px !important;
+			    @include rounded(50% !important);
+			}
+		}
+	}
+	&.pat-widget-profile {
+		.profile-info-widget {
+			.booking-doc-img {
+				padding: 0;
+				img {
+				    height: 100px !important;
+				    width: 100px !important;
+				    @include rounded(50%);
+				}
+			}
+		}
+	}
+}
+.appointment-list {
+	.profile-info-widget {
+		@extend %display-flex;
+	    margin-right: $__auto;
+	    text-align: $__left;
+	    @include respond-below(custom479) {
+	    	text-align: $__center;
+	    	-ms-flex-direction: column;
+    		flex-direction: column;
+	    }
+	    .booking-doc-img {
+		    @include respond-below(custom479) {
+		    	@include margin-padding(0 0 15px, null);
+		    }
+	    	img {
+			    height: 120px;
+			    object-fit: $__cover;
+			    width: 120px;
+			    @include rounded(4px);
+			    @include respond-below(custom479) {
+				    height: 100px;
+				    width: 100px;
+				    @include rounded(50%);
+			    }
+	    	}
+	    }
+	}
+	.profile-det-info {
+		@include respond-below(custom479) {
+			margin-bottom: 15px;
+		}
+	}
+
+}
+.appointments {
+	.appointment-list {
+		background-color: $__white;
+	    border: 1px solid $__light-silver;
+		@extend %display-flex;
+	    @extend %flex-wrap;
+	    @include margin-padding(0 0 20px, 20px);
+	    @include rounded(4px);
+	    &:last-child {
+			margin-bottom: 30px;
+		}
+		@include respond-below(custom991) {
+			display: $__block;
+		}
+		@include respond-below(custom479) {
+			text-align: $__center;
+		}
+		.profile-det-info {
+			@include respond-below(custom479) {
+			    margin-bottom: 15px;
+			}
+		}
+	}
+	.appointment-action {
+		@extend %align-items-center;
+		@extend %inline-flex;
+		@include respond-below(custom991) {
+			margin-top: 10px;
+		}
+		@include respond-below(custom479) {
+			margin-top: 0;
+		}
+		a {
+			font-size: $__font__size__13;
+			& + a {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+.info-details {
+	list-style: $__none;
+    @include margin-padding(0, 0);
+    li {
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.title {
+		    color: $__dark__blue;
+		    font-weight: $__medium;
+		}
+		.text {
+		    color: $__smokey-gray;
+		    display: $__block;
+		    font-size: $__font__size__16;
+		    overflow: $__hidden;
+		}
+	}
+}

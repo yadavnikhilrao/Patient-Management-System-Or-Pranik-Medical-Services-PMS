@@ -1,0 +1,367 @@
+.doctor-search-section {
+    padding-top: 95px;
+    position: $__relative;
+    background: url(../img/banner-2.jpg);
+    background-position: 50% 0;
+    background-size: $__cover;
+    background-repeat: $__no-repeat;
+    z-index: 1;
+    @include respond-below(custom991) {
+        padding-top: 85px;
+    }
+    .doctor-search {
+        padding-bottom: 15px;
+        @include respond-below(custom991) {
+            padding: 30px 0;
+        }
+    }
+    .banner-header {
+        h2 {
+            color: $__blue__03;
+            font-size: $__font__size__32;
+            font-weight: $__semibold;
+            line-height: 54px;
+            @include respond-below(custom767) {
+                font-size: $__font__size__26;
+                line-height: 40px;
+            }
+        }
+    }
+    .doctor-search-form {
+        select, input {
+            border: 1px solid rgba(16, 222, 253, 0.1);
+            box-shadow: 0px 4px 4px rgb(237 237 237 / 25%);
+            border-radius: 5px;
+        }
+    }
+    .dr-img {
+        @include respond-below(custom991) {
+            display: $__none;
+        }
+    }
+}
+.clinics-section {
+    padding: 60px 0 40px;
+    background: $__white;
+    @include respond-below(custom991) {
+        padding: 40px 0 25px;
+    }
+    @include respond-below(custom767) {
+        padding: 30px 0 10px;
+    }
+    .clinic-item {
+        &:hover {
+            .clinics-card {
+                .clinics-img {
+                    &:after {
+                        background: rgba(45, 226, 253, 0.9);
+                    }
+                }
+            }
+            .clinics-icon {
+                @include transform(translate(0, -180%));
+                i {
+                    color: $__banner-btn;
+                    background: $__white;
+                }
+            }
+        }
+    }
+    .clinics-card {
+        position: $__relative;
+        border-radius: 10px;
+        overflow: $__hidden;
+        .clinics-img {
+            position: $__relative;
+            &:after {
+                content: '';
+                background: rgba(28, 91, 144, 0.9);
+                @include position($__absolute, 0, 0, 0, 0);
+            }
+        }
+        .clinics-info {
+            margin: 0 $__auto;
+            text-align: $__center;
+            @include position($__absolute, 50%, 0, null, 0);
+            @include transform(translateY(-50%));
+            img {
+                width: 60px !important;
+                margin: $__auto;
+                margin-bottom: 10px;
+            }
+            span {
+                font-weight: 600;
+                font-size: 18px;
+                color: $__white;
+            }
+        }
+    }
+    .clinics-icon {
+        @include transform(translate(0, -50%));
+        @include transition(all .3s ease 0s);
+        i {
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+            text-align: $__center;
+            line-height: 35px;
+            background: $__sky__01;
+            color: $__white;
+            margin: $__auto;
+            display: $__block;
+        }
+    }
+}
+.section-heading {
+    margin-bottom: 30px;
+    @include respond-below(custom767) {
+        margin-bottom: 15px;
+    }
+    h2 {
+        font-weight: $__bold;
+        font-size: $__font__size__26;
+        color: $__banner-btn;
+        @include respond-below(custom767) {
+            font-size: $__font__size__20;
+        }
+    }
+    p {
+        font-size: $__font__size__14;
+        color: $__plum__gray;
+        margin-bottom: 0;
+    }
+    &.bg-area {
+        h2 {
+            color: $__white;
+        }
+        p {
+            color: $__white;
+        }
+    }
+}
+.specialities-section {
+    padding: 80px 0 55px;
+    position: $__relative;
+    background: url(../img/specialist-bg.jpg);
+    background-position: 50% 0;
+    background-size: $__cover;
+    background-repeat: $__no-repeat;
+    z-index: 1;
+    @include respond-below(custom991) {
+        padding: 60px 0 35px;
+    }
+    @include respond-below(custom767) {
+        padding: 40px 0 15px;
+    }
+    &:after {
+        content: "";
+        background: rgba(25, 69, 107, 0.9);
+        z-index: -1;
+        @include position($__absolute, 0, 0, 0, 0);
+    }
+    .specialist-card {
+        background: $__white;
+        box-shadow: 0px 4px 24px rgb(183 183 183 / 25%);
+        border-radius: 163px;
+        align-items: $__center;
+        @include margin-padding(0 0 25px, 15px);
+        &:hover {
+            background: $__ash__sky;
+            .specialist-img {
+                background: $__sky__01;
+            }
+            .specialist-nav {
+                i {
+                    background: $__sky__01;
+                    color: $__white;
+                }
+            }
+        }
+        .specialist-img {
+            background: $__blue__04;
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            @include transition(all .3s ease 0s);
+            @include margin-padding(0 10px 0 0, 10px);
+        }
+        .specialist-info {
+            p {
+                font-weight: $__medium;
+                color: $__black;
+                margin-bottom: 0;
+            }
+            h4 {
+                font-weight: $__semibold;
+                color: $__blue__05;
+                margin-bottom: 0;
+            }
+        }
+        .specialist-nav {
+            i {
+                border-radius: 50%;
+                height: 35px;
+                width: 35px;
+                text-align: $__center;
+                line-height: 35px;
+                background: $__white;
+                box-shadow: 0px 4px 24px rgb(183 183 183 / 25%);
+                color: $__dark__pink;
+                margin: $__auto;
+                display: $__block;
+                @include transition(all .3s ease 0s);
+            }
+        }
+    }
+    
+}
+.shapes {
+    position: $__absolute;
+    width: $__full__width;
+    @include respond-below(custom991) {
+        display: $__none;
+    }
+    .shape-1 {
+        @include position($__absolute, 0, null, null, 0);
+    }
+    .shape-2 {
+        @include position($__absolute, 0, 0, null, null);
+    }
+    .shape-3 {
+        @include position($__absolute, -110px, null, null, 0);
+    }
+    .shape-4 {
+        @include position($__absolute, -110px, 0, null, null);
+    }
+}
+.our-doctors-section {
+    padding: 60px 0;
+    background: $__white;
+    @include respond-below(custom991) {
+        padding: 40px 0;
+    }
+    @include respond-below(custom767) {
+        padding: 30px 0;
+    }
+    .our-doctors-card {
+        background: rgba(232, 246, 255, 0.4);
+        border: 1px solid rgba(231, 237, 255, 0.5);
+        border-radius: 10px;
+        padding: 10px;
+        .doctors-header {
+            position: $__relative;
+            img {
+                border-radius: 10px 10px 0 0;
+            }
+            .img-overlay {
+                background: $__blue__04;
+                border-radius: 110px;
+                padding: 5px 10px;
+                color: $__white;
+                font-weight: $__bold;
+                font-size: $__font__size__14;
+                @include position($__absolute, 10px, 10px, null, null);
+            }
+        }
+        .doctors-body {
+            background: $__white;
+            border-radius: 0px 0px 10px 10px;
+            padding: 10px;
+            .rating {
+                font-size: 12px;
+                i {
+                    &.filled {
+                        color: $__banner-btn;
+                    }
+                }
+                .average-ratings {
+                    background: $__banner-btn;
+                    border-radius: 70px;
+                    color: $__white;
+                    padding: 1px 15px;
+                    margin-left: 10px;
+                }
+            }
+            h4 {
+                color: $__ash__night;
+                font-weight: $__semibold;
+                margin-bottom: .5rem;
+            }
+            p {
+                color: $__blue__06;
+                font-weight: $__medium;
+                margin-bottom: 0;
+                font-size: $__font__size__11;
+            }
+            .location {
+                padding: 20px 0;
+                p {
+                    font-size: $__font__size__13;
+                    color: $__black;
+                    i {
+                        color: $__banner-btn;
+                    }
+                }
+            }
+            .view-btn {
+                background: $__sky__white;
+                border: 1px solid $__sky__white;
+                box-sizing: border-box;
+                border-radius: 30px;
+                color: rgba(41, 68, 129, 0.9);
+                padding: 10px 0;
+                &:hover {
+                    background-color: $__blue__14;
+                    color: $__white;
+                }
+            }
+            .book-btn {
+                background: $__sky__01;
+                border-radius: 30px;
+                padding: 10px 0;
+                border: 0;
+                &:hover {
+                    background-color: $__blue__14;
+                }
+            }
+        }
+    }
+}
+.clinic-features-section {
+    position: $__relative;
+    background: url(../img/featured-bg.jpg);
+    background-position: 50% 0;
+    background-size: $__cover;
+    background-repeat: $__no-repeat;
+    padding: 60px 0;
+    @include respond-below(custom991) {
+        padding: 40px 0;
+    }
+    @include respond-below(custom767) {
+        padding: 30px 0;
+    }
+    .clinic-features {
+        position: $__relative;
+        img {
+            border-radius: 10px;
+        }
+    }
+    .clinic-feature-overlay {
+        text-align: $__center;
+        width: $__full__width;
+        @include position($__absolute, null, null, 20px, null);
+        .img-overlay {
+            background: $__sky__blue;
+            border-radius: 60px;
+            padding: 10px 15px;
+            text-transform: $__uppercase;
+            color: $__ash__water;
+            font-weight: $__semibold;
+            min-width: 150px;
+            display: $__inline__block;
+            &:hover {
+                background-color: $__blue__14;
+            }
+        }
+    }
+} 

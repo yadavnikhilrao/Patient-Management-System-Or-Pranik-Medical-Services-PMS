@@ -1,0 +1,672 @@
+.doc-form {
+    @include position($__absolute, 155px, null, null, null);
+    @include margin-padding(null, 50px 0);
+    @include respond-below(custom991) {
+        width: 600px;
+        @include margin-padding(null, 37px 0);
+        @include position($__absolute, 85px, null, null, 20px);
+    }
+    @include respond-below(custom767) {
+        padding: 10px;
+        left: 0;
+    }
+    .app-form {
+        position: $__relative;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.87);
+        @include margin-padding(null, 30px);
+        @include respond-below(custom767) {
+            display: $__none;
+        }
+        h2 {
+            color: $__rose__light;
+            font-size: $__font__size__34;
+            margin-bottom: 30px;
+            @include respond-below(custom991) {
+                font-size: $__font__size__30;
+            }
+            .header-highlight {
+                color: $__dark__ink;
+                font-weight: $__semibold;
+            }
+        }
+        .doctor-search-form {
+            .form-custom {
+                position: $__relative;
+                i {
+                    color: $__light__celeste;
+                }
+            }
+            input {
+                border-radius: 20px;
+                @include respond-below(custom991) {
+                    min-height: 50px;
+                }
+            }
+        }
+        .banner-btn {
+            background-color: $__light__celeste;
+            border-radius: 20px;
+            @include margin-padding(null, 18px 30px);
+            @include respond-below(custom991) {
+                padding: 10px 30px;
+                min-height: 50px;
+                justify-content: $__center;
+                align-items: $__center;
+                display: $__flex;
+            }
+            &:hover {
+                background-color: $__blue__14;
+            }
+        }
+    }
+}
+.form-custom {
+    i {
+        color: $__ash__red;
+        @include position($__absolute, 35%, 15px, null, null);
+    }
+}
+.doctor-search-form select {
+    border: 1px solid rgba(16, 222, 253, 0.1);
+    box-shadow: 0px 4px 4px rgb(237 237 237 / 25%);
+    border-radius: 5px;
+}
+.doctor-search-form input {
+    border: 1px solid rgba(16, 222, 253, 0.1);
+    box-shadow: 0px 4px 4px rgb(237 237 237 / 25%);
+    border-radius: 5px;
+}
+.doctor-search-form {
+    input, select {
+        background: $__white;
+        border-radius: 130px;
+        min-height: 60px;
+        border: 0;
+    }
+}
+.category-sec {
+    position: relative;
+    @include margin-padding(-30px 0 0, 0 0 50px 0);
+    @include respond-below(custom991) {
+        @include margin-padding(0, 50px 0);
+    }
+    @include respond-below(custom767) {
+        @include margin-padding(null, 30px 0);
+    }
+    .set-category {
+        background-color: $__dark__ink;
+        border-radius: 20px;
+        min-height: 200px;
+        @extend %flex-align-center;
+        @include margin-padding(null, 15px);
+        @include respond-below(custom991) {
+            @include margin-padding(null, 10px);
+        }
+        @include respond-below(custom991) {
+            margin-bottom: 30px;
+        }
+        .img-holder {
+            margin-right: 20px;
+            @include respond-below(custom991) {
+                margin-right: 10px;
+            }
+            a {
+                width: 60px;
+                height: 60px;
+                background-color: $__white;
+                border-radius: 50%;
+                @extend %flex-align-center;
+                @include respond-below(custom991) {
+                    width: 50px;
+                    height: 50px;
+                }
+                img {
+                    width: 30px;
+                    @include respond-below(custom991) {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+        .info-holder {
+            h3 {
+                font-size: $__font__size__26;
+                font-weight: $__bold;
+                color: $__white;
+                @include respond-below(custom991) {
+                    font-size: $__font__size__20;
+                }
+            }
+            p {
+                font-size: $__font__size__14;
+                color: $__white;
+                margin-bottom: 30px;
+                @include respond-below(custom991) {
+                    font-size: $__font__size__11;
+                }
+            }
+            .book-now {
+                color: $__white;
+                i {
+                    position: $__absolute;
+                    @include margin-padding(4px 6px, null);
+                }
+            }
+        }
+        h1 {
+            font-size: $__font__size__60;
+            font-weight: $__bold;
+            color: $__white;
+            opacity: 0.1;
+            @include margin-padding(0, null);
+            @include position($__absolute, null, 25px, -13px, null);
+        }
+        &.light {
+            background-color: $__light__celeste;
+        }
+        &.lighter {
+            background-color: $__ash__blue;
+        }
+    }
+}
+.clinic-section {
+    @include margin-padding(null, 50px 0 20px);
+    @include respond-below(custom767) {
+        @include margin-padding(null, 30px 0 0);
+    }
+}
+.sec-header {
+    margin-bottom: 40px;
+    text-align: $__center;
+    h2 {
+        font-size: $__font__size__30;
+        margin-bottom: 0;
+        font-weight: $__bold;
+        color: $__dark__lapis;
+        @include respond-below(custom767) {
+            font-size: $__font__size__24;
+        }
+    }
+    .bottom-border {
+        border-top: 3px solid $__rose__light;
+        width: 75px;
+        position: $__relative;
+        display: $__inline__block;
+        border-radius: 150px;
+        @include margin-padding(20px 0 $__auto, null);
+        &:after {
+            content: "";
+            width: 6px;
+            background: $__white;
+            height: 3px;
+            z-index: 9;
+            @include position($__absolute, -3px, 4px, null, null);
+        }
+    }
+}
+.browse-speciality {
+    background-color: $__ash__white;
+    @include margin-padding(null, 50px 0 25px);
+    @include respond-below(custom767) {
+        @include margin-padding(null, 30px 0 15px);
+    }
+}
+.browse-widget {
+    &:hover {
+        .overlay {
+            background-color: rgba(36, 36, 36, 0.5);
+            .arrows {
+                background-color: $__white;
+                @include transform(translate(0, -320%));
+                i {
+                    color: $__banner-btn;
+                }
+            }
+        }
+    }
+    & > img {
+        border-radius: 10px;
+        width: $__full__width;
+    }
+    .overlay {
+        background-color: rgba(34, 100, 197, 0.8);
+        width: $__full__width;
+        height: $__full__height;
+        border-radius: 10px;
+        flex-direction: column;
+        @extend %flex-align-center;
+        @include margin-padding(null, 10px);
+        @include transition(all .3s ease 0s);
+        @include position($__absolute, 0, null, null, null);
+        h3 {
+            font-size: $__font__size__18;
+            font-weight: $__semibold;
+            color: $__white;
+        }
+        .arrows {
+            background-color: $__light__celeste;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            @extend %flex-align-center;
+            @include position($__absolute, null, null, -15px, null);
+            i {
+                color: $__white;
+            }
+        }
+    }
+}
+.patient-select {
+    background: url(../img/slider/blue-bg.png);
+    background-size: $__cover;
+    @include margin-padding(null, 50px 0);
+    @include respond-below(custom767) {
+        background: $__info__dark url(../img/slider/blue-bg.png);
+        padding: 30px 0 0;
+    }
+    .select-box {
+        background: url(../img/slider/doctor-bg.jpg);
+        border-radius: 60px 10px 10px 60px;
+        border: 5px solid rgba(255, 255, 255, 0.8);
+        @include margin-padding(null, 30px);
+        position: $__relative;
+        z-index: 1;
+        @include respond-below(custom991) {
+            @include margin-padding(null, 20px);
+        }
+        @include respond-below(custom767) {
+            margin-bottom: 30px;
+            border-radius: 60px;
+        }
+        &::before {
+            content: "";
+            background: rgba(16, 222, 253, 0.6);
+            z-index: -1;
+            border-radius: 55px 5px 5px 55px;
+            @include position($__absolute, 0, 0, 0, 0);
+        }
+        .image-holder {
+            margin-right: 20px;
+            @include respond-below(custom991) {
+                margin-right: 15px;
+            }
+            span {
+                background-color: $__white;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                border: 6px solid rgb(210 237 246);
+                @extend %flex-align-center;
+                img {
+                    width: 55px;
+                }
+            }
+        }
+        h2 {
+            font-size: $__font__size__30;
+            font-weight: $__bold;
+            color: $__white;
+            margin-bottom: 15px;
+            @include respond-below(custom767) {
+                font-size: $__font__size__24;
+            }
+        }
+        p {
+            font-size: $__font__size__15;
+            color: $__white;
+            margin-bottom: 30px;
+            @include respond-below(custom991) {
+                font-size: $__font__size__14;
+                margin-bottom: 20px;
+            }
+            @include respond-below(custom767) {
+                font-size: $__font__size__12;
+            }
+        }
+        .book-now {
+            background-color: $__sky__light;
+            color: $__white;
+            border-radius: 30px;
+            font-size: $__font__size__14;
+            font-weight: $__semibold;
+            display: $__block;
+            width: 110px;
+            @include margin-padding(null, 6px 20px);
+            @include respond-below(custom991) {
+                @include margin-padding(null, 8px 20px);
+            }
+            @include respond-below(custom767) {
+                font-size: $__font__size__13;
+            }
+            &:hover {
+                background-color: $__blue__14;
+            }
+        }
+        &.theme {
+            background: url(../img/slider/patient-bg.jpg);
+            border-radius: 10px 60px 60px 10px;
+            position: $__relative;
+            z-index: 1;
+            @include respond-below(custom767) {
+                border-radius: 60px;
+            }
+            &::before {
+                content: "";
+                background: rgba(28, 113, 239, 0.6);
+                z-index: -1;
+                border-radius: 5px 55px 55px 5px;
+                @include position($__absolute, 0, 0, 0, 0);
+            }
+            .image-holder {
+                span {
+                    border: 6px solid rgb(217 225 240);
+                }
+            }
+            .book-now {
+                background-color: $__blur__blue;
+                &:hover {
+                    background-color: $__blue__14;
+                }
+            }
+        }
+    }
+}
+.book-doctor {
+    @include margin-padding(null, 50px 0);
+    @include respond-below(custom767) {
+        @include margin-padding(null, 30px 0);
+    }
+    .view-btn {
+        background-color: $__sky__blue;
+        font-size: $__font__size__16;
+        color: $__white;
+        font-weight: $__bold;
+        border-radius: 30px;
+        border: 1px solid $__sky__blue;
+        padding: 6px 20px;
+        @include respond-below(custom767) {
+            font-size: $__font__size__14;
+        }
+        &:hover {
+            background-color: $__blue__14;
+            border: 1px solid $__blue__14;
+        }
+    }
+    .row.mt-4 {
+        @include respond-below(custom767) {
+            margin-top: 0 !important;
+        }
+    }
+}
+.book-slider {
+    &.doctor-best {
+        .pro-content {
+            .star {
+                right: 15px;
+            }
+        }
+    }
+    .profile-widget {
+        border: $__none;
+        @include margin-padding(0 0 70px, 0);
+        a {
+            border-radius: 10px 10px 0px 0px;
+            img {
+                width: $__full__width;
+                border-radius: 10px 10px 0px 0px;
+            }
+        }
+        .content-info {
+            display: $__none;
+            padding: 0;
+            .view-btn {
+                background-color: $__blue__01;
+                border: 1px solid $__blue__01;
+                border-radius: 30px;
+                padding: 7px;
+                border: $__none;
+                color: $__white;
+                font-size: $__font__size__12;
+                font-weight: $__medium;
+            }
+            .book-btn {
+                background-color: $__sky__01;
+                border: 1px solid $__sky__01;
+                border-radius: 30px;
+                padding: 7px;
+                border: $__none;
+                color: $__white;
+                font-size: $__font__size__12;
+                font-weight: $__medium;
+            }
+        }
+        &:hover {
+            .rating {
+                display: $__block;
+            }
+            .content-info {
+                display: $__block;
+            }
+            .side-arrow {
+                display: $__none;
+            }
+        }
+    }
+    .pro-content {
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: $__full__width;
+        height: $__full__height;
+        padding: 10px;
+        border-radius: 10px 10px 0px 0px;
+        @include position($__absolute, 0, null, null, null);
+        .amt {
+            background-color: $__rose__light;
+            padding: 3px 8px;
+            border-radius: 30px;
+            color: $__white;
+            font-weight: $__bold;
+            font-size: $__font__size__12;
+            opacity: 0;
+            @include transition(all 0.3s ease);
+        }
+        .star {
+            background-color: $__info__dark;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: $__white;
+            font-size: $__font__size__12;
+            @include position($__absolute, null, 0, null, null);
+            @extend %flex-align-center;
+        }
+    }
+    .provider-info {
+        background-color: $__white;
+        border-radius: 10px;
+        width: $__full__width;
+        @include transition(all 0.3s ease);
+        @include position($__absolute, null, null, -40px, 0);
+        @include margin-padding(null, 15px);
+        h3 {
+            @include respond-below(custom767) {
+                font-size: $__font__size__18;
+            }
+            a {
+                font-size: $__font__size__22;
+                font-weight: $__bold;
+                color: $__dark__lapis;
+                @include respond-below(custom767) {
+                    font-size: $__font__size__20;
+                }
+            }
+        }
+        h5 {
+            color: $__rose__light;
+            font-size: $__font__size__15;
+            font-weight: $__semibold;
+            float: $__left;
+            @include respond-below(custom767) {
+                font-size: $__font__size__12;
+            }
+        }
+        .rating {
+            display: $__none;
+            font-size: $__font__size__12;
+            width: $__auto;
+            text-align: $__right;
+            i {
+                font-size: $__font__size__10;
+                color: $__light__metallic;
+                &.filled {
+                    color: $__star__yellow;
+                }
+            }
+            span {
+                padding: 0 8px;
+                background-color: $__star__yellow;
+                border-radius: 30px;
+                font-size: $__font__size__10;
+                color: $__white;
+                font-weight: $__bold;
+                margin-left: 5px;
+            }
+        }
+        .side-arrow {
+            width: 40px;
+            height: 40px;
+            background-color: $__sky__ink;
+            border-radius: 50%;
+            color: $__white;
+            @extend %flex-align-center;
+            @include position($__absolute, 15px, 15px, null, null);
+            @include respond-below(custom767) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .available-info {
+        li {
+            font-size: $__font__size__14;
+            font-weight: $__medium;
+            color: $__black;
+            @include respond-below(custom767) {
+                font-size: $__font__size__13;
+            }
+            i {
+                font-size: $__font__size__14;
+                color: $__banner-btn;
+            }
+        }
+    }
+}
+.aval-features {
+    background-color: $__blue__02;
+    .custom-contain {
+        @include respond-above(custom1200) {        
+            width: $__full__width;
+            @include margin-padding(0 auto, 0 15px);
+        }
+        @include respond-below(custom991) {        
+            width: $__full__width;
+            max-width: $__full__width;
+            @include margin-padding(0 auto, 0 15px);
+        }
+    }
+    .feature {
+        background: url(../img/slider/feature-img.jpg);
+        padding: 40px;
+        background-repeat: $__no-repeat;
+        background-size: $__cover;
+        @include respond-below(custom991) {
+            align-items: $__center;
+            justify-content: $__center;
+            display: $__flex;
+            padding: 40px;
+        }
+        @include respond-below(custom767) {
+            padding: 30px;
+        }
+        .info-box {
+            background: rgba(24, 96, 202, 0.8);
+            padding: 40px;
+            @include respond-below(custom991) {
+                padding: 20px;
+            }
+            h2 {
+                font-size: $__font__size__40;
+                font-weight: $__bold;
+                color: $__white;
+                margin-bottom: 15px;
+                @include respond-below(custom991) {
+                    font-size: $__font__size__30;
+                }
+                @include respond-below(custom767) {
+                    font-size: $__font__size__24;
+                    margin-bottom: 10px;
+                }
+                @include respond-below(custom479) {
+                    font-size: $__font__size__20;
+                }
+            }
+            p {
+                color: $__white;
+                font-size: $__font__size__14;
+                font-weight: $__semibold;
+                margin-bottom: 20px;
+                @include respond-below(custom767) {
+                    font-size: $__font__size__13;
+                    margin-bottom: 15px;
+                }
+            }
+            a {
+                background: $__sky__01;
+                border-radius: 30px;
+                width: 120px;
+                color: $__white;
+                padding: 6px;
+                @include respond-below(custom767) {
+                    font-size: $__font__size__12;
+                    width: 100px;
+                }
+                &:hover {
+                    background-color: $__blue__14;
+                    border: 2px solid $__blue__14;
+                }
+            }
+        }
+    }    
+    .aval-widget {
+        margin-bottom: 30px;
+        position: $__relative;
+        @include transition(all .3s ease 0s);
+        .features-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 80px 60px 50px 50px;
+            margin: 0 auto;
+            img {
+                border-radius: 80px 60px 50px 50px;
+                width: 100%;
+                border: 4px solid $__white;
+            }
+            p {
+                background: $__sky__blue;
+                border-radius: 30px;
+                color: $__white;
+                text-align: $__center;
+                @include margin-padding(20px 0 0, 6px);
+                &:hover {
+                    background-color: $__blue__14;
+                }
+            }
+        }
+    }
+    .col-md-6.ps-0 {
+        @include respond-below(custom767){
+            padding-left: 15px !important;
+        }        
+    }
+}

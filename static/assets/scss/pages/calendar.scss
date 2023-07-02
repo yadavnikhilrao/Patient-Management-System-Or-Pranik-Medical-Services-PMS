@@ -1,0 +1,139 @@
+#calendar-events {
+    background-color: $__water__white;
+}
+.calendar-events {
+    border: 1px solid $__transparent;
+    cursor: move;
+    @include margin-padding(null, 10px 15px);
+    &:hover {
+		border-color: $__light__metalic;
+	    background-color: $__white;
+	}
+	i {
+	    margin-right: 8px;
+	}
+}
+.calendar {
+	float: $__left;
+	margin-bottom: 0;
+}
+.fc-toolbar {
+	&.fc-header-toolbar {
+	    margin-bottom: 1.5rem;
+	    .fc-right {
+		    @include respond-below(custom479) {
+		    	margin-bottom: 10px;
+		    }
+		}
+		.fc-left {
+		    @include respond-below(custom479) {
+		    	margin-bottom: 10px;
+		    }
+		}
+	}
+	h2 {
+		font-size: $__font__size__18;
+		font-weight: $__semibold;
+		font-family: 'Roboto', sans-serif;
+		line-height: 30px;
+		text-transform: $__uppercase;
+	}
+	.fc-state-active, .ui-state-active, .ui-state-hover, button:hover, button:focus {
+		z-index: 0;
+	}
+}
+.none-border {
+	.modal-footer {
+		border-top: $__none;
+	}
+}
+.fc-day-grid-event {
+	.fc-time {
+		font-family: 'Roboto', sans-serif;
+	}
+}
+.fc-day {
+	background: $__white;
+}
+.fc {
+	th {
+		&.fc-widget-header {
+			background: $__cloud__gray;
+			font-size: $__font__size__14;
+			line-height: 20px;
+			text-transform: $__uppercase;
+			@include margin-padding(null, 10px 0);
+		}
+	}
+}
+.fc-unthemed {
+	th, td, thead, tbody, .fc-divider, .fc-row, .fc-popover {
+		border-color: $__light__water__white;
+	}
+	.fc-today {
+		background: $__white;
+	}
+}
+.fc-basic-view {
+	.fc-day-number, .fc-week-number {
+		@include margin-padding(null, 2px 5px);
+	}
+	td {
+		&.fc-week-number {
+			span {
+				padding-right: 8px;
+				font-weight: $__bold;
+				font-family: 'Roboto', sans-serif;
+			}
+		}
+		&.fc-day-number {
+			padding-right: 8px;
+			font-weight: $__bold;
+			font-family: 'Roboto', sans-serif;
+		}
+	}
+}
+.fc-button {
+	background: $__light__vampire;
+	border: $__none;
+	color: $__granite__gary;
+	text-transform: $__capitalize;
+	box-shadow: $__none !important;
+	border-radius: 3px !important;
+	height: $__auto !important;
+	@include margin-padding(0 3px !important, 6px 12px !important);
+}
+.fc-text-arrow {
+	font-family: $__inherit;
+	font-size: $__font__size__16;
+}
+.fc-state-hover {
+	background: $__light__water__white;
+}
+.fc-state-highlight {
+	background: $__light-silver;
+}
+.fc-state-down, .fc-state-active, .fc-state-disabled {
+	background-color: $__sky__blue !important;
+	color: $__white !important;
+	text-shadow: $__none !important;
+}
+.fc-cell-overlay {
+	background: $__light-silver;
+}
+.fc-event {
+	border: $__none;
+	color: $__white !important;
+	cursor: move;
+	font-size: $__font__size__13;
+	text-align: $__center;
+	@include rounded(2px);
+	@include margin-padding(1px 7px, 5px 5px);
+}
+.event-form {
+	.input-group {
+		.form-control {
+			height: 40px;
+		}
+	}
+}

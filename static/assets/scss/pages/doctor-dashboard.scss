@@ -1,0 +1,252 @@
+.profile-sidebar {
+    background-color: $__white;
+	border: 1px solid $__light-silver;
+	margin-bottom: 30px;
+	overflow: $__hidden;
+    @include rounded(4px);
+    @include respond-below(custom767) {
+    	margin-bottom: 20px !important;
+    }
+	.pro-widget-content {
+	    border-bottom: 1px solid $__light-silver;
+	    @include margin-padding(0, 20px);
+	    text-align: $__center;
+	}
+	.dashboard-menu {
+		ul {
+			color: $__smokey-gray;
+		    font-size: $__font__size__14;
+		    line-height: $__font__size__17;
+		    list-style: $__none;
+		    text-transform: $__capitalize;
+		    @include margin-padding(0, 0);
+		    li {
+				line-height: $__inherit;
+				a {
+					i {
+						font-size: $__font__size__16;
+					    margin-right: 10px;
+					    width: 16px;
+					}
+					span, i {
+						display: $__inline__block;
+						vertical-align: $__middle;
+					}
+				}
+				.unread-msg {
+				    background-color: $__primarycolor;
+				    color: $__dark__blue;
+				    font-size: $__font__size__10;
+				    font-style: $__normal;
+				    text-align: $__center;
+				    @include transform(translateY(-50%));
+				    @include rounded(2px);
+				    @include position ($__absolute, 50%, 20px, null, null);
+				    @include margin-padding(null, 0 5px);
+				}
+			}
+		}
+		& > ul {
+			& > li {
+				border-bottom:1px solid $__light-silver;
+				position: $__relative;
+				&:last-child {
+					border-bottom: 0;
+				}
+				a {
+					color: $__smokey-gray;
+					display: $__block;
+					@include margin-padding(null, 16px 20px);
+				}
+				&:hover {
+					& > a {
+						color: $__celeste;
+					}
+				}
+				&.active {
+					& > a {
+						color: $__celeste;
+					}
+				}
+			}
+		}
+	}
+}
+.dash-card {
+	.dash-widget {
+		@extend %align-items-center;
+		@extend %display-flex;
+		@include respond-below(custom1199) {
+			-ms-flex-direction: column;
+			flex-direction: column;
+			text-align: $__center;
+		}
+		@include respond-below(custom991) {
+			flex-direction: $__unset;
+    		text-align: $__left;
+		}
+		.circle-bar {
+		    margin-right: 15px;
+		    @include respond-below(custom1199) {
+		    	@include margin-padding(0 0 15px, null);
+		    }
+		    @include respond-below(custom991) {
+		    	@include margin-padding(0 15px 0 0, null);
+		    }
+		    & > div {
+		    	display: $__inline__block;
+				position: $__relative;
+				text-align: $__center;
+				img {
+				    text-align: $__center;
+				    @include margin-padding(0 $__auto, null);
+				    @include transform(translateY(-50%));
+				    @include position($__absolute, 50%, 0, null, 0);
+				}
+				canvas {
+					width: 90px !important;
+					height: 90px !important;
+				}
+		    }
+		}
+		&.dct-border-rht {
+			border-right: 1px solid $__light-silver;
+			@include respond-below(custom991) {
+				border-bottom: 1px solid $__light-silver;
+				border-right: 0;
+				margin-bottom: 20px;
+				padding-bottom: 15px;
+			}
+		}
+		h6 {
+		    font-size: $__font__size__16;
+		    font-weight: $__regular;
+		    @include respond-below(custom767) {
+		    	font-size: $__font__size__15;
+		    }
+		}
+		h3 {
+		    font-size: $__font__size__24;
+		    margin-bottom: 5px;
+		    @include respond-below(custom767) {
+		    	font-size: $__font__size__20;
+		    }
+		}
+		p {
+			color: $__smokey-gray;
+		    font-size: $__font__size__14;
+			margin-bottom: 0;
+			@include respond-below(custom767) {
+		    	font-size: $__font__size__13;
+		    }
+		}
+	}
+	.row {
+		margin-left: -10px;
+		margin-right: -10px;
+		& > div {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+}
+.appointment-tab {
+	margin-bottom: 30px;
+	@include respond-below(custom767) {
+		margin-bottom: 20px;
+	}
+	.nav-tabs {
+	    background-color: $__white;
+	    border: 1px solid $__light-silver;
+	    border-radius: .25rem 0.25rem 0 0 !important;
+		border-bottom: 0;
+		@include margin-padding(null, 1.5rem);
+		@include respond-below(custom767) {
+			@include margin-padding(null, 1.5rem);
+		}
+	}
+	.tab-content {
+		padding-top: 0;
+	}
+	.card {
+		@include rounded(0);
+	}
+
+}
+.profile-det-info {
+	overflow: $__hidden;
+	h3 {
+		font-size: $__font__size__17;
+		    text-overflow: $__ellipsis;
+		    white-space: $__nowrap;
+		    overflow: $__hidden;
+	}
+	.patient-details {
+		h5 {
+		    color: $__smokey-gray;
+		    font-size: $__font__size__13;
+		    font-weight: $__normal;
+		    margin-bottom: 8px;
+		    overflow: $__hidden;
+		    text-overflow: $__ellipsis;
+		    white-space: $__nowrap;
+		    i {
+				width: 18px;
+			}
+		}
+	}
+}
+.profile-info-widget {
+	@extend %display-flex;
+	text-align: $__left;
+	.booking-doc-img {
+		margin-right: 15px;
+		img {
+			height: 90px;
+			width: 90px;
+			object-fit: $__cover;
+			@include rounded(4px);
+		}
+	}
+}
+.change-avatar {
+	@extend %align-items-center;
+	@extend %display-flex;
+	.profile-img {
+		margin-right: 15px;
+		img {
+		    height: 100px;
+		    width: 100px;
+		    object-fit: $__cover;
+		    @include rounded(4px);
+		    @include respond-below(custom575) {
+		    	height: 80px;
+    			width: 80px;
+		    }
+		}
+	}
+	.change-photo-btn {
+	    @include margin-padding(0 0 10px, null);
+	    width: 150px;
+	    input {
+	    	&.upload {
+			    bottom: 0;
+			    cursor: $__pointer;
+			    filter: alpha(opacity=0);
+			    opacity: 0;
+			    width: 220px;
+			    @include margin-padding(0, 0);
+			    @include position($__absolute, 0, 0, null, 0);
+	    	}
+	    }
+	}
+}
+.dropzone {
+    background-color: $__mix__white;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+}
+.profile-image {
+	img {
+		margin-bottom: 1.5rem;
+	}
+}

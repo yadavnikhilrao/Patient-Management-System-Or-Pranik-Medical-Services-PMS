@@ -1,0 +1,312 @@
+.section-search-1 { 
+	background: $__platinum url(../img/slider-bg.jpg) no-repeat bottom center;
+    min-height: 450px;
+    position: $__relative;
+    background-blend-mode: Darken;
+    background-size: cover;
+    .dr-img {
+        @include respond-below(custom991) {
+            display: none;
+        }       
+    }
+}
+.search-doctor {
+    @include margin-padding(auto, null);
+    .search-area {
+        background: #ffffff6b;
+        position: $__relative;
+        z-index: 1;
+        border-radius: 10px;
+        max-width: 410px;
+        @include margin-padding(auto, 60px 30px);
+        h2 {
+            font-size: 1.7rem;
+            font-weight: $__semibold;
+        }
+    }
+    .submit-section {
+        .submit-btn {
+            font-weight: $__semibold;
+            font-size: $__font__size__16;
+            min-width: 120px;
+            @include margin-padding(null, 12px 30px);
+            @include respond-below(custom767) {
+                font-size: $__font__size__15;
+                min-width: 105px;
+                @include margin-padding(null, 10px 20px);
+            }
+        }
+    }
+}
+.section-category {
+    background-color: $__white;
+    @include margin-padding(null, 80px 0);
+    .category-box {
+        text-align: $__center;
+        box-shadow: 2px 2px 13px rgb(0 0 0 / 10%);
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        @include margin-padding(0 0 30px, 20px);
+        .category-image {
+            background: $__primarycolor;
+            height: 60px;
+            width: 60px;
+            align-items: $__center;
+            border-radius: 4px;
+            @include margin-padding(auto, 7px 0 0);
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        .category-content {
+            margin-top: 20px;
+            h4 {
+                font-size: $__font__size__20;
+                font-weight: $__medium;
+                color: $__dark__blue;
+            }
+        }
+        &:hover {
+            text-align: $__center;
+            box-shadow: 2px 2px 13px rgb(0 0 0 / 0%);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            cursor: $__pointer;
+            @include margin-padding(null, 20px);
+        }
+    }
+}
+.pharmacy-home-slider {
+    position: $__relative;
+    .swiper-container {
+        position: $__relative;
+        padding: 0 !important;
+        height: 450px;
+        min-height: $__inherit;
+        &:before {
+            content: "";
+            width: $__full__width;
+            height: $__full__height;
+            z-index: 99;
+            background-color: rgba(13, 13, 13, 0.33);
+            @include position($__absolute, 0, null, null, 0);
+        }
+    }
+    img {
+        max-width: $__full__width;
+        height: $__full__height;
+    }
+    .swiper-button-next {
+        font-size: 0;
+        line-height: 0;
+        display: $__block;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        box-shadow: 1px 6px 14px rgb(0 0 0 / 20%);
+        background: $__white;
+        border-radius: 100%;
+        cursor: $__pointer;
+        border: $__none;
+        outline: $__none;
+        background: $__white;
+        z-index: 9999;
+        @include transform(translate(0, -50%));
+        @include position($__absolute, 50%, 10px, null, $__auto);
+        @include respond-below(custom767) {
+            display: $__none;
+        }
+        &::before {
+            content: '→';
+            color: $__dark__night;
+            height: 40px;
+            font-size: $__font__size__20;
+            @extend %flex-align-center;
+        }
+        &::after {
+            display: $__none;
+        }
+    }
+    .swiper-button-prev {
+        font-size: 0;
+        line-height: 0;
+        display: $__block;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        box-shadow: 1px 6px 14px rgb(0 0 0 / 20%);
+        background: $__white;
+        border-radius: 100%;
+        cursor: $__pointer;
+        border: $__none;
+        outline: $__none;
+        background: $__white;
+        z-index: 9999;
+        @include transform(translate(0, -50%));
+        @include position($__absolute, 50%, $__auto, null, 10px);
+        @include respond-below(custom767) {
+            display: $__none;
+        }
+        &:before {
+            content: '←';
+            color: $__dark__night;
+            height: 40px;
+            font-size: $__font__size__20;
+            @extend %flex-align-center;
+        }
+        &::after {
+            display: $__none;
+        }
+    }
+    .banner-wrapper {
+        padding: 0 15px;
+        z-index: 999;
+        @include transform(translate(-50%, -50%));
+        @include position($__absolute, 50%, null, null, 50%);
+        .banner-header {
+            margin-bottom: 30px;
+            h1 {
+                color: $__white;
+                margin-bottom: 10px;
+                font-size: $__font__size__40;
+                font-weight: $__semibold;
+                @include respond-below(custom991) {
+                    font-size: $__font__size__34;
+                }
+                @include respond-below(custom767) {
+                    font-size: $__font__size__32;
+                }
+                @include respond-below(custom575) {
+                    font-size: $__font__size__28;
+                }
+            }
+            p {
+                color: $__white;
+                font-size: $__font__size__20;
+                margin-bottom: 0;
+                @include respond-below(custom767) {
+                    font-size: $__font__size__16;
+                }
+            }
+        }        
+        .search-box {
+            @include respond-below(custom767) {
+                max-width: 535px;
+                @include margin-padding(0 auto, null);
+            }
+            form {
+                @extend %display-flex;
+                @include respond-below(custom767) {
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    word-wrap: break-word;
+                    background-clip: border-box;
+                }
+                @include respond-below(custom575) {
+                    display: $__block;
+                }
+                .search-location {
+                    -ms-flex: 0 0 240px;
+                    flex: 0 0 240px;
+                    margin-right: 12px;
+                    position: $__relative;
+                    width: 240px;
+                    @include respond-below(custom767) {
+                        -ms-flex: 0 0 $__full__width;
+                        flex: 0 0 $__full__width;
+                        width: $__full__width;
+                    }
+                    @include respond-below(custom575) {
+                        width: $__full__width !important;
+                        -ms-flex: $__none;
+                        flex: $__none;
+                    }
+                    .form-control {
+                        background: $__white url(../img/location.png) $__no-repeat 10px $__center;
+                    }
+                }
+                .form-control {
+                    border: 1px solid $__goose-gray;
+                    box-shadow: inset 0 0px 0px rgb(0 0 0 / 8%);
+                    border-radius: 5px;
+                    padding-left: 35px;
+                }
+                .form-text {
+                    color: $__white;
+                    font-size: $__font__size__13;
+                }
+                .search-info {
+                    -ms-flex: 0 0 490px;
+                    flex: 0 0 490px;
+                    margin-right: 12px;
+                    position: $__relative;
+                    width: 490px;
+                    @include respond-below(custom991) {
+                        -ms-flex: 0 0 410px;
+                        flex: 0 0 410px;
+                        width: 410px;
+                    }
+                    @include respond-below(custom767) {
+                        -ms-flex: 0 0 $__full__width;
+                        flex: 0 0 $__full__width;
+                        width: $__full__width;
+                    }
+                    @include respond-below(custom575) {
+                        width: $__full__width !important;
+                        -ms-flex: $__none;
+                        flex: $__none;
+                    }
+                    .form-control {
+                        background: $__white url(../img/search.png) $__no-repeat 10px $__center;
+                    }
+                }
+                .search-btn {
+                    width: 46px;
+                    -ms-flex: 0 0 46px;
+                    flex: 0 0 46px;
+                    height: 46px;
+                    @include respond-below(custom767) {
+                        -ms-flex: 0 0 $__full__width;
+                        flex: 0 0 $__full__width;
+                        min-height: 46px;
+                        width: $__full__width;
+                    }
+                    span {
+                        display: $__none;
+                        font-weight: $__medium;
+                        @include respond-below(custom767) {
+                            display: $__inline__block;
+                            margin-left: 5px;
+                            text-transform: $__uppercase;
+                        }
+                    }
+                }
+            }
+            .form-group {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .swiper-pagination {
+        left: 50%;
+        @include transform(translateX(-50%));
+        padding: 20px;
+        .swiper-pagination-bullet {
+            background: $__jet__gray;
+            width: 20px;
+            height: 5px;
+            opacity: 1;
+            left: 0 !important;
+            border-radius: 0;
+            margin: 0 5px;
+            @include transform(scale(1) !important);
+            &.swiper-pagination-bullet-active {
+                background-color: $__celeste;
+                width: 20px;
+                height: 5px;
+                opacity: 1;
+            }
+        }
+    }
+}

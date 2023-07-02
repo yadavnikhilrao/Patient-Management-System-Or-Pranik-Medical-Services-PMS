@@ -1,0 +1,108 @@
+.contact-section {
+    @include margin-padding(0, 80px 0 55px);
+    @include respond-below(custom991) {
+        @include margin-padding(0, 40px 0 15px); 
+    }
+    @include respond-below(custom767) {
+        @include margin-padding(0, 40px 0 20px);
+    }
+}
+.contact-inner-header {
+	margin-bottom: 40px;
+    @include respond-below(custom767) {
+        margin-bottom: 30px;
+    }
+}
+.contact-card {
+	border: 2px solid $__grey_700;
+	border-radius: 0;
+	.card-body {
+		@extend %flex__center;
+        @include margin-padding(0, 30px);
+        @include respond-below(custom991) {
+            @include margin-padding(0, 20px);
+        }
+        @include respond-below(custom767) {
+            @include margin-padding(0, 15px);
+        }
+	}
+}
+.contact-icon {
+	color: $__blue__14;
+	font-size: $__font__size__44;
+	margin-right: 20px;
+    @include respond-below(custom991) {
+        font-size: $__font__size__40;
+        margin-right: 15px;
+    }
+}
+.contact-details {
+	h4 {
+		font-weight: $__semibold;
+		font-size: $__font__size__20;
+		color: $__black_shade;
+		margin-bottom: 8px;
+        @include respond-below(custom991) {
+            font-size: $__font__size__18;
+        }
+	}
+	p {
+		font-size: $__font__size__16;
+		margin-bottom: 0;
+        @include respond-below(custom991) {
+            font-size: $__font__size__14;
+        }
+	}
+}
+.contact-form-card {
+	background: $__ghost_white;
+	border-radius: 10px;
+	border: 0;
+	.card-body {
+        @include margin-padding(0, 30px);
+        @include respond-below(custom991) {
+            @include margin-padding(0, 20px);
+        }
+        @include respond-below(custom767) {
+            @include margin-padding(0, 15px);
+        }
+	}
+	.form-group {
+		margin-bottom: 25px;
+		label {
+			font-size: $__font__size__12;
+			color: $__black_shade;
+			margin-bottom: 8px;
+		}
+		.form-control {
+			font-weight: $__medium;
+			color: $__bodycolor;
+			&::placeholder {
+				font-weight: $__medium;
+				color: $__bodycolor;
+			}
+		}
+		textarea {
+			&.form-control {
+				min-height: 150px;
+				resize: $__none;
+			}
+		}
+	}
+	.form-group-btn {
+		margin-top: 35px;
+		.btn {
+			border-radius: 5px;
+			min-width: 150px;
+            @include margin-padding(0, 10px 15px);
+			font-weight: $__medium;
+		}
+	}
+}
+.contact-map {
+	iframe {
+		width: $__full__width;
+		border: $__none;
+		height: 450px;
+	}
+}

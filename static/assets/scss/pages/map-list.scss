@@ -1,0 +1,71 @@
+.map-page {
+	.footer {
+		display: $__none;
+	}
+	.header {
+		z-index: 1030;
+		@include position($__fixed, 0, 0, null, 0);
+	}
+	.content {
+		padding-top: 115px;
+		@include respond-below(custom991) {
+			padding-top: 100px;
+		}
+	}
+}
+.map-right {
+    height: $__full__width;
+    min-height: 100%;
+	padding-right: 30px;
+    z-index: 1029;
+    @include position($__fixed, 115px, 0, 0, null);
+    @include respond-below(custom1199) {
+        height: 450px;
+	    position: $__static;
+	    min-height: $__inherit;
+	    margin-bottom: 30px;
+	    padding-right: 15px;
+    }
+    .available-info {
+		margin-bottom: 0;
+	}
+}
+.map-listing {
+    height: calc(100vh - 145px);
+    width: $__full__width;
+    @include respond-below(custom1199) {
+    	height: 450px;
+    }
+    .profile-widget {
+	    width: 200px !important;
+	    border: 0;
+		margin-bottom: 0;		
+	    @include margin-padding(null, 0);
+	}
+}
+.view-icons {
+    display: $__inline__flex;
+    float: $__right;
+    a {
+		background-color: $__white;
+		border: 1px solid $__light__goose;
+		color: $__dark__ash;
+		font-size: $__font__size__20;
+		text-align: $__center;
+		margin-left: 10px;
+		width: 44px;
+		height: 44px;
+		@extend %flex-align-center;
+		@include rounded(4px);		
+	    @include margin-padding(null, 4px 10px);
+		&:hover {
+			border-color: $__sky__blue;
+			color: $__sky__blue;
+		}
+		&.active {
+		    background-color: $__sky__blue;
+			border-color: $__sky__blue;
+			color: $__white;
+		}
+	}
+}

@@ -1,0 +1,175 @@
+.profile-sidebar {
+    background-color: $__white;
+	border: 1px solid $__light-silver;
+	margin-bottom: 30px;
+	overflow: $__hidden;
+	@include rounded(4px);
+}
+.pro-widget-content {
+    border-bottom: 1px solid $__light-silver;
+    text-align: $__center;
+    @include margin-padding(null, 20px);
+}
+.profile-info-widget {
+    text-align: $__left;
+	@extend %display-flex;
+	.booking-doc-img {
+	    margin-right: 15px;
+	    img {
+		    height: 90px;
+		    width: 90px;
+		    object-fit: $__cover;
+		    @include rounded(4px);
+		}
+	}
+}
+.profile-det-info {
+	overflow: $__hidden;
+	h3 {
+		font-size: $__font__size__17;
+	    text-overflow: $__ellipsis;
+	    white-space: $__nowrap;
+	    overflow: $__hidden;
+	}
+}
+.patient-details {
+	h5 {
+	    color: $__smokey-gray;
+	    font-size: $__font__size__13;
+	    font-weight: $__normal;
+	    margin-bottom: 8px;
+	    overflow: $__hidden;
+	    text-overflow: $__ellipsis;
+	    white-space: $__nowrap;
+	    i {
+			width: 18px;
+		}
+	}
+}
+.dashboard-menu {
+	ul {
+	    color: $__smokey-gray;
+	    font-size: $__font__size__14;
+	    line-height: $__font__size__17;
+	    list-style: $__none;
+	    text-transform: $__capitalize;
+	    @include margin-padding(0, 0);
+	    li {
+			line-height: $__inherit;
+			a {
+				i {
+					font-size: $__font__size__16;
+				    margin-right: 10px;
+				    width: 16px;
+					display: $__inline__block;
+					vertical-align: $__middle;
+				}
+				span {
+					display: $__inline__block;
+					vertical-align: $__middle;
+				}
+			}
+		}
+	}
+	& > ul {
+		& > li {
+			border-bottom:1px solid $__light-silver;
+			position: $__relative;
+			:last-child {
+				border-bottom: 0;
+			}
+			& > a {
+				color: $__smokey-gray;
+				display: $__block;
+				@include margin-padding(null, 16px 20px);
+			}
+			&:hover, &.active {
+				& > a {
+					color: $__celeste;
+				}
+			}
+		}
+	}
+}
+.unread-msg {
+    background-color: $__primarycolor;
+    color: $__dark__blue;
+    font-size: 10px;
+    font-style: $__normal;
+    text-align: $__center;
+    @include transform( translateY(-50%));
+    @include position($__absolute, 50%, 20px, null, null);
+    @include margin-padding(null, 0 5px);
+    @include rounded(2px);
+}
+.patient-dashboard-top {
+	@extend %display-flex;
+	&  > div {
+		width: $__full__width;
+	}
+	h6 {
+		font-size: $__font__size__18;
+		margin-bottom: 0;
+		sub {
+			font-size: $__font__size__12;
+		}
+	}
+}
+.patient-graph-box {
+	@extend %display-flex;
+}
+.patient-graph-col {
+	.graph-box {
+		background: $__light__blue;
+		border-bottom: 8px solid $__blue__13;
+		width: $__full__width;
+		@include margin-padding(15px 0, 22px);
+		@extend %display-flex;
+		@extend %flex-wrap;
+		&.pink-graph {
+			background-color: $__chilli__red;
+			border-bottom: 8px solid $__chilli__red;
+		}
+		&.sky-blue-graph {
+			background-color: $__sky__light__01;
+			border-bottom: 8px solid $__sky__light__02;
+		}
+		&.orange-graph {
+			background-color: $__light__orange__01;
+			border-bottom: 8px solid $__light__orange__01;
+		}
+		h4 {
+			color: $__white;
+			margin-bottom: 15px;
+			text-align: $__center;
+		}
+		& > div {
+			width: $__full__width;
+		}
+		.graph-img {
+			text-align: $__center;
+			margin: 0 $__auto;
+			width: $__full__width;
+		}
+		.graph-status-result {
+			@extend %display-flex;
+			@extend %flex-wrap;
+			@extend %flex-end;
+			h3 {
+				color: $__white;
+				margin-bottom: 0;
+				line-height: 0.9;
+				width: $__full__width;
+			}
+			span {
+				&.graph-update-date {
+					color: $__white;
+					font-weight: $__medium;
+					opacity: 0.7;
+					text-align: $__center;
+					width: $__full__width;
+				}
+			}
+		}
+	}
+}

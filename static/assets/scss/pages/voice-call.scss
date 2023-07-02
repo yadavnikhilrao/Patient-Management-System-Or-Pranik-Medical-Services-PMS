@@ -1,0 +1,410 @@
+.modal-open {
+	.main-wrapper {
+	    @include filter(blur(1px));
+	}
+}
+.call-main-row {
+	overflow: $__auto;
+	padding-bottom: $__inherit;
+	padding-top: $__inherit;
+	@include position($__absolute, 0, 0, 0, 0);
+}
+.call-main-wrapper {
+	display: $__table;
+	height: $__full__height;
+	table-layout: $__fixed;
+	width: $__full__width;
+}
+.call-view {
+	display: table-cell;
+	height: $__full__height;
+	float: $__none;
+	position: $__static;
+	vertical-align: $__top;
+	width: 75%;
+	@include margin-padding(null, 0);
+}
+.call-window {
+	display: $__table;
+	height: $__full__height;
+	table-layout: $__fixed;
+	width: $__full__width;
+	background-color: $__white;
+	border: 1px solid $__light-silver;
+}
+.fixed-header {
+	background-color: $__white;
+	border-bottom: 1px solid $__light-silver;
+	@include margin-padding(null, 10px 15px);
+	.navbar {
+		border: 0 $__none;
+		min-height: $__auto;
+		@include margin-padding(0, 0);
+	}
+	.user-info {
+		a {
+		    color: $__dark__blue;
+		    font-weight: $__medium;
+		}
+	}
+	.custom-menu {
+		@include margin-padding(0 0 1px, null);
+	}
+}
+.typing-text {
+	color: $__sky__blue;
+	font-size: $__font__size__12;
+	text-transform: $__lowercase;
+}
+.last-seen {
+	color: $__dark__gray;
+	display: $__block;
+	font-size: $__font__size__12;
+}
+.custom-menu {
+	margin-top: 6px;
+	&.nav {
+		& > li {
+			& > a {
+				color: $__metalic__gray;
+			    font-size: $__font__size__26;
+			    line-height: 32px;
+			    margin-left: 15px;
+			    @include margin-padding(null, 0);
+			}
+		}
+	}
+	&.navbar-nav {
+		& > li {
+			& > a {
+				&:hover, &:focus {
+					background-color: $__transparent;
+				}
+			}
+		}
+	}
+	.dropdown-menu {
+		left: $__auto;
+		right: 0;
+	}
+}
+.call-contents {
+	display: table-row;
+	height: $__full__height;
+}
+.call-content-wrap {
+	height: $__full__height;
+	position: $__relative;
+	width: $__full__width;
+}
+.voice-call-avatar {
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex: 2;
+	flex: 2;
+	@extend %flex-align-center;
+	.call-avatar {
+		width: 150px;
+		height: 150px;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		background-color: $__white;
+		@include margin-padding(15px, 3px);
+		@include rounded(100%);
+		@include respond-below(custom767) {
+			height: 100px;
+			width: 100px;
+		}
+		@include respond-below(custom575) {
+			height: 80px;
+			width: 80px;
+		}
+	}
+	.call-timing-count {
+		@include margin-padding(null, 5px);
+	}
+	.username {
+		font-size: $__font__size__20;
+		font-weight: $__medium;
+	}
+}
+.call-duration {
+	display: $__inline__block;
+	font-size: $__font__size__30;
+	margin-top: 4px;
+	@include position($__absolute, null, null, null, 0);
+	@include respond-below(custom767) {
+		font-size: $__font__size__24;
+	}
+	@include respond-below(custom575) {
+		display: $__block;
+		margin-top: 0;
+		margin-bottom: 10px;
+		position: $__inherit;
+	}
+}
+.call-footer {
+	background-color: $__white;
+	border-top: 1px solid $__light-silver;
+	@include margin-padding(null, 15px);
+}
+.call-icons {
+	text-align: $__center;
+	position: $__relative;
+	.call-items {
+		list-style: $__none;
+		display: $__inline__block;
+		@include rounded(5px);
+		@include margin-padding(0, 0);
+		.call-item {
+			display: $__inline__block;
+			text-align: $__center;
+			margin-right: 5px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				color: $__dark__battle__gary;
+				border: 1px solid $__light__goose;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				display: $__inline__block;
+				font-size: $__font__size__20;
+				@include rounded(50px);
+				i {
+					width: 18px;
+					height: 18px;
+				}
+			}
+		}
+		li { 
+			&.end-call-new {
+				display: $__inline__block;
+				text-align: $__center;
+				margin-right: 5px;
+				a {
+					background-color: $__cherry__red;
+				    color: $__white;
+				    display: $__inline__block;
+				    line-height: 10px;
+				    text-transform: $__uppercase;
+				    @include rounded(50px);
+				    @include margin-padding(null, 8px 25px);
+				}
+			}
+		}
+	}
+}
+.user-video {
+	overflow: $__auto;
+	z-index: 10;
+	@include position($__absolute, 0, 0, 0, 0);
+	img, video {
+		width: $__auto;
+		max-width: $__full__width;
+		height: $__auto;
+		max-height: $__full__height;
+		display: $__block;
+		@include margin-padding(0 $__auto, null);
+	}
+}
+.my-video {
+	z-index: 99;
+	@include position($__absolute, null, null, 20px, 20px);
+	ul {
+		list-style: $__none;
+		@include margin-padding(0, 0);
+		li {
+			float: $__left;
+			width: 120px;
+			margin-right: 10px;
+			@include respond-below(custom767) {
+				width: 50px;
+			}
+			img {
+				border: 3px solid $__white;
+				@include rounded(6px);
+			}
+		}
+	}
+}
+.end-call {
+	@include position($__absolute, 7px, 0, null, null);
+	@include respond-below(custom575) {
+		margin-top: 10px;
+		position: $__inherit;
+	}
+	a {
+		background-color: $__cherry__red;
+	    color: $__white;
+	    display: $__inline__block;
+	    line-height: 10px;
+	    text-transform: $__uppercase;
+	    @include margin-padding(null, 8px 25px);
+	    @include rounded(50px);
+	}
+}
+.call-users {
+	z-index: 99;
+	@include position($__absolute, null, 20px, 20px, null);
+	ul {
+		list-style: $__none;
+		@include margin-padding(0, 0);
+		li {
+			float: $__left;
+			width: 80px;
+			margin-left: 10px;
+			@include respond-below(custom767) {
+				width: 50px;
+			}
+			img {
+				background-color: $__white;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				@include rounded(6px);
+				@include margin-padding(null, 2px);
+			}
+			a {
+				&:hover {
+					.call-mute {
+						display: $__block;
+					}
+				}
+			}
+		}
+	}
+}
+.call-mute {
+	width: 80px;
+	height: 80px;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: $__center;
+	line-height: 80px;
+	font-size: $__font__size__30;
+	color: $__white;
+	display: $__none;
+	border: 3px solid $__transparent;
+	@include rounded(6px);
+	@include position($__absolute, 0, null, null, null);
+	@include respond-below(custom767) {
+		font-size: $__font__size__20;
+		height: 50px;
+		line-height: 50px;
+		width: 50px;
+	}
+}
+.call-details {
+	@extend %display-flex;
+	@include margin-padding(10px 0 0, null);
+}
+.call-info {
+	margin-left: 10px;
+	width: $__full__width;
+}
+.call-user-details, .call-timing {
+	display: $__block;
+	text-overflow: $__ellipsis;
+	overflow: $__hidden;
+	white-space: $__nowrap;
+}
+.call-description {
+	white-space: $__nowrap;
+	vertical-align: $__bottom;
+}
+.call-timing {
+	color: $__dark__smokeygray;
+	font-size: $__font__size__14;
+	margin-top: 1px;
+	overflow: $__hidden;
+	white-space: pre;
+	@extend %display-flex;
+}
+.content-full {
+	height: $__full__height;
+	position: $__relative;
+	width: $__full__width;
+}
+.video-window {
+	.fixed-header {
+		@include margin-padding(0, 0);
+		.nav {
+			& > li {
+				& > a {
+					@include margin-padding(null, 18px 15px);
+				}
+			}
+		}
+	}
+}
+.user-img {
+    display: $__inline__block;
+    position: $__relative;
+}
+span{
+	&.call-duration {
+		&.float-end {
+			display: $__inline__block;
+			font-size: $__font__size__22;
+			margin-top: 0px;
+			color: $__aquamarine;
+			@include position($__absolute, null, 0, null, $__unset);
+		}
+	}
+}
+.toggle-voice-video {
+	display: $__inline__block;
+	font-size: $__font__size__30;
+	margin-top: 4px;
+	@include position($__absolute, null, null, null, 0);
+	.switch {
+		position: $__relative;
+	  	display: $__inline__block;
+	  	width: 90px;
+	  	height: 34px;
+	  	input {
+	  		display: $__none;
+	  	}
+	}
+	.slider {
+		cursor: $__pointer;
+		background-color: $__primary__light;
+		@include transition(.4s);
+		@include rounded(34px);
+		@include position($__absolute, 0, 0, 0, 0);
+		&:before {
+		  	content: "";
+		  	height: 26px;
+		  	width: 26px;
+		  	background-color: $__white;
+		  	@include transition(.4s);
+			@include rounded(50%);
+			@include position($__absolute, null, null, 4px, 4px);
+		}
+		&:after {
+			content:'VOICE';
+			color: $__white;
+			display: $__block;
+			font-size: $__font__size__10;
+			font-family: Verdana, sans-serif;
+			@include transform(translate(-50%,-50%));
+			@include position($__absolute, 50%, null, null, 50%);
+		}
+	}
+	input {
+		&:checked {
+			& + .slider {
+				background-color: $__spring__green;
+				&:before {
+				  @include transform(translateX(55px));
+				}
+				&:after {
+				  content:'VIDEO';
+				}
+			}
+		}
+		&:focus {
+			& + .slider {
+				box-shadow: 0 0 1px $__primary__light;
+			}
+		}
+	}
+}

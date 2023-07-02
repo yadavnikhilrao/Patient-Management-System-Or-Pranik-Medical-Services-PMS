@@ -1,0 +1,345 @@
+.pricing-section {
+	background-color: $__white;
+    @include margin-padding(0, 80px 0 55px);
+    @include respond-below(custom991) {
+        @include margin-padding(0, 40px 0 15px);
+    }
+    @include respond-below(custom767) {
+        @include margin-padding(0, 40px 0 20px);
+    }
+}
+.pricing-inner-header {
+	margin-bottom: 80px;
+    @include respond-below(custom991) {
+        margin-bottom: 40px;
+    }
+}
+.plan-choose-info {
+	@extend %flex-align-center;
+	padding-top: 15px;
+	label {
+		margin-bottom: 0;
+	}
+	.monthly-plan {
+		color: $__black_shade;
+	}
+	.yearly-plan {
+		color: $__bodycolor;
+	}
+	.status-toggle {
+        @include margin-padding(0 20px, 0);
+	}
+	.checktoggle {
+		background-color: $__blue__14;
+		border: 1px solid $__blue__14;
+	}
+	.check {
+		&:checked {
+			& + .checktoggle {
+				background-color: $__white;
+				border: 1px solid $__blue__14;
+				&:after {
+					background-color: $__blue__14;
+				}
+			}
+		}
+	}
+    .monthly-plan, .yearly-plan {
+        font-weight: $__medium;
+        font-size: $__font__size__18;
+        @include respond-below(custom767) {
+            font-size: $__font__size__16;
+        }
+    }
+}
+.pricing-card {
+	background: $__mist_white;
+	border: 1px solid $__white_tone;
+	border-radius: 24px;
+    @include transition(0.7s);
+	&:hover {
+		background: $__blue__14;
+        @include transition(0.7s);
+		.pricing-icon {
+			span {
+				background: $__white;
+                @include transition(0.7s);
+                @include transform(rotate(90deg));
+				img {
+                    @include transform(rotate(-90deg));
+                    @include transition(0.7s);
+				}
+			}
+		}
+		.pricing-title {
+			p {
+				color: $__flash_color;
+                @include transition(0.7s);
+			}
+			h4 {
+				color: $__white;
+                @include transition(0.7s);
+			}
+		}
+		.pricing-header-text {
+			p {
+				color: $__white;
+                @include transition(0.7s);
+			}
+		}
+		.pricing-amount {
+			h2 {
+				color: $__white;
+                @include transition(0.7s);
+				span {
+					color: $__fog_color;
+                    @include transition(0.7s);
+				}
+			}
+			h6 {
+				color: $__white;
+                @include transition(0.7s);
+			}
+		}
+		.pricing-list {
+			ul {
+				li {
+					color: $__white;
+                    @include transition(0.7s);
+					&:before {
+						color: $__white;
+                        @include transition(0.7s);
+					}
+				}
+			}
+		}
+		.pricing-btn {
+			.btn {
+				color: $__white;
+				border: 1px solid $__broken_blue;
+				box-shadow: inset 0 0 0 50px $__broken_blue;
+			}
+		}
+	}
+	.card-body {
+        @include margin-padding(0, 30px);
+        @include respond-below(custom991) {
+            @include margin-padding(0, 20px);
+        }
+        @include respond-below(custom767) {
+            @include margin-padding(0, 15px);
+        }
+	}
+}
+.pricing-card-active {
+	background: $__blue__14;
+	.pricing-icon {
+		span {
+			background: $__white;
+            @include transition(0.7s);
+            @include transform(rotate(90deg));
+			img {
+                @include transform(rotate(-90deg));
+                @include transition(0.7s);
+			}
+		}
+	}
+	.pricing-title {
+		p {
+			color: $__flash_color;
+            @include transition(0.7s);
+		}
+		h4 {
+			color: $__white;
+            @include transition(0.7s);
+		}
+	}
+	.pricing-tag {
+	    margin-left: $__auto;
+		span {
+			background: $__tag__blue;
+			color: $__white;
+			font-weight: $__medium;
+			border-radius: 10px;
+			padding: 12px 13px;
+		}
+	}
+	.pricing-header-text {
+		p {
+			color: $__white;
+            @include transition(0.7s);
+		}
+	}
+	.pricing-amount {
+		h2 {
+			color: $__white;
+            @include transition(0.7s);
+			span {
+				color: $__fog_color;
+                @include transition(0.7s);
+			}
+		}
+		h6 {
+			color: $__white;
+            @include transition(0.7s);
+		}
+	}
+	.pricing-list {
+		ul {
+			li {
+				color: $__white;
+                @include transition(0.7s);
+				&:before {
+					color: $__white;
+                    @include transition(0.7s);
+				}
+			}
+		}
+	}
+	.pricing-btn {
+		.btn {
+			color: $__white;
+			border: 1px solid $__broken_blue;
+			box-shadow: inset 0 0 0 50px $__broken_blue;
+		}
+	}
+}
+.pricing-header {
+	padding-bottom: 15px;
+}
+.pricing-header-info {
+	@extend %flex__center;
+	padding-bottom: 15px;
+}
+.pricing-icon {
+	margin-right: 15px;
+	span {
+		min-width: 70px;
+		height: 70px;
+		background: $__white;
+		border-radius: 16px;
+		@extend %flex-align-center;
+        @include transition(0.7s);
+        @include transform(rotate(0));
+		img {
+            @include transform(rotate(0));
+            @include transition(0.7s);
+		}
+	}
+}
+.pricing-title {
+	p {
+		font-weight: $__medium;
+		font-size: $__font__size__16;
+		color: $__bodycolor;
+		margin-bottom: 0;
+        @include transition(0.7s);
+        @include respond-below(custom767) {
+            font-size: $__font__size__15;
+        }
+	}
+	h4 {
+		font-size: $__font__size__24;
+		color: $__midnight_black;
+		margin-bottom: 0;
+        @include transition(0.7s);
+        @include respond-below(custom767) {
+            font-size: $__font__size__20;
+        }
+	}
+}
+.pricing-header-text {
+	p {
+		color: $__bodycolor;
+		margin-bottom: 0;
+        @include transition(0.7s);
+	}
+}
+.pricing-amount {
+	padding-bottom: 20px;
+	h2 {
+		font-weight: $__bold;
+		font-size: $__font__size__30;
+		color: $__midnight_black;
+		margin-bottom: 8px;
+        @include transition(0.7s);
+		span {
+			font-weight: $__regular;
+			font-size: $__font__size__14;
+			color: $__gulf_gray;
+            @include transition(0.7s);
+		}
+        @include respond-below(custom991) {
+            font-size: $__font__size__40;
+        }
+        @include respond-below(custom767) {
+            font-size: $__font__size__30;
+        }
+	}
+	h6 {
+		font-weight: $__medium;
+		font-size: $__font__size__20;
+		color: $__midnight_black;
+		margin-bottom: 0;
+        @include transition(0.7s);
+        @include respond-below(custom767) {
+            font-size: $__font__size__16;
+        }
+	}
+}
+.pricing-list {
+	padding-bottom: 50px;
+	ul {
+        @include margin-padding(0, 0);
+		list-style: $__none;
+		li {
+			position: $__relative;
+			font-size: $__font__size__16;
+			color: $__bodycolor;
+			padding-left: 25px;
+			margin-bottom: 10px;
+            @include transition(0.7s);
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+                @include position($__absolute, 50%, null, null, 0);
+                @include transform(translateY(-50%));
+				content: "\f058";
+				font-family: $__fontawesome__family;
+				font-size: $__font__size__16;
+				font-weight: 900;
+				color: $__blue__14;
+				border: 0;
+                @include transition(0.7s);
+			}
+            @include respond-below(custom767) {
+                font-size: $__font__size__14;
+            }
+		}
+	}
+    @include respond-below(custom991) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(custom767) {
+        padding-bottom: 20px;
+    }
+}
+.pricing-btn {
+	text-align: $__center;
+	.btn {
+		font-weight: $__semibold;
+		font-size: $__font__size__14;
+        @include margin-padding(0, 11px 15px);
+		min-width: $__full__width;
+		display: $__inline__block;
+		color: $__white;
+	    border: 1px solid $__blue__14;
+	    background: $__blue__14;
+        @include respond-below(custom767) {
+            @include margin-padding(0, 8px 15px);
+            font-size: $__font__size__14;
+        }
+	}
+}
+

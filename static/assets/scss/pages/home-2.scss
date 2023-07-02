@@ -1,0 +1,81 @@
+.section-search-2 {
+    background: $__info__blue;
+    min-height: 450px;
+    position: $__relative;
+    background-blend-mode: Darken;
+    background-repeat: $__repeat;
+    .search-img {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    .search-doctor {
+        @include margin-padding($__auto, null);
+    }
+}
+.banner-wrapper {
+    max-width: 800px;
+    width: $__full__width;
+    @include margin-padding(0 $__auto, null);
+    @include respond-below(custom991) {
+        max-width: 720px;
+    }
+    .search-box-3 {
+        background: $__info_sky;
+        border-radius: 10px;
+        @include position($__absolute, null, null, null, null);
+        @include margin-padding(-50px 0 0, 40px 20px);
+        @include respond-below(custom991) {
+            display: $__none;
+        }
+        form {
+            @extend %display-flex;
+        }
+        .search-location {
+            -ms-flex: 0 0 240px;
+            flex: 0 0 240px;
+            margin-right: 12px;
+            position: $__relative;
+            width: 240px;
+            .form-control {
+                background: $__white url(../img/location.png) no-repeat 10px $__center;
+            }
+        }
+        .form-group {
+            margin-bottom: 0px;
+        }
+        .form-control {
+            border: 1px solid $__goose-gray;
+            box-shadow: inset 0 0px 0px rgb(0 0 0 / 8%);
+            border-radius: 5px;
+            padding-left: 35px;
+        }
+        .search-info {
+            -ms-flex: 0 0 490px;
+            flex: 0 0 490px;
+            margin-right: 12px;
+            position: $__relative;
+            width: 490px;
+            .form-control {
+                background: $__white url(../img/search.png) no-repeat 10px $__center;
+            }
+        }
+        .form-control {
+            background: $__white url(../img/search.png) no-repeat 10px $__center;
+        }
+        .search-btn {
+            width: 46px;
+            -ms-flex: 0 0 46px;
+            flex: 0 0 46px;
+            height: 46px;
+            span {
+                display: $__none;
+                font-weight: $__medium;
+            }
+        }
+    }
+}
+.btn-search {
+    background: $__white;
+    border: 1px solid $__white;
+    color: $__info_sky;
+}
