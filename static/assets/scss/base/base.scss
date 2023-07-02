@@ -1,0 +1,270 @@
+html {
+    height: $__full__height;
+}
+body {
+	font-family: $__body__font__family;
+	background-color: $__white;
+	font-size: $__body__font__size;
+	color:$__bodycolor;
+	line-height: 1.5;
+	height: $__full__height;
+	overflow-x: $__hidden;
+	@include respond-below(custom767) {
+		font-size: $__font__size__14;
+	}
+	@include respond-below(custom575) {
+		font-size: $__font__size__13;
+	}
+}
+img {
+	max-width:$__full__width;
+	height: $__auto;
+}
+a {
+	color: $__dark-blue;
+	cursor: $__pointer;
+	@include transition(all 0.4s ease);
+	text-decoration: $__none;
+	&:hover{
+		color:$__primarycolor;
+		@include transition(all 0.4s ease);
+		text-decoration: $__none;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+.green .intro_text a {
+	&:hover{
+		color:$__primarycolor;
+		@include transition(all 0.2s ease);
+	}
+}
+p {	
+	margin-top: 0;
+	margin-bottom: $__font__size__16;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: $__dark__blue;
+    font-weight: $__medium;
+}
+.h1, h1 {
+    font-size: 2.25rem;
+    @include respond-below(custom767) {
+		font-size: $__font__size__32;
+    }
+    @include respond-below(custom575) {
+		font-size: $__font__size__28;
+    }
+}
+.h2, h2 {
+    font-size: $__font__size__30;
+    @include respond-below(custom767) {
+		font-size: $__font__size__28;
+    }
+    @include respond-below(custom575) {
+		font-size: $__font__size__24;
+    }
+}
+.h3, h3 {
+    font-size: 1.5rem;
+    @include respond-below(custom767) {
+		font-size: $__font__size__22;
+    }
+    @include respond-below(custom575) {
+		font-size: $__font__size__20;
+    }
+}
+.h4, h4 {
+    font-size: $__font__size__18;
+    @include respond-below(custom767) {
+		font-size: $__font__size__16;
+    }
+    @include respond-below(custom575) {
+		font-size: $__font__size__16;
+    }
+}
+.h5, h5 {
+    font-size: 1rem;
+    @include respond-below(custom767) {
+		font-size: $__font__size__14;
+    }
+    @include respond-below(custom575) {
+		font-size: $__font__size__14;
+    }
+}
+.h6, h6 {
+    font-size: $__font__size__14;
+    @include respond-below(custom767) {
+		font-size: $__font__size__12;
+    }
+    @include respond-below(custom575) {
+		font-size: $__font__size__12;
+    }
+}
+.btn-primary {
+    background-color: $__primarycolor;
+    border: 1px solid $__primarycolor;
+    &:hover {
+    	background-color: $__primarycolor-hover;
+    	border: 1px solid $__primarycolor-hover;
+    }
+}
+.container-fluid {
+    @include margin-padding(null, 0 30px);
+    @include respond-below(custom1199) {
+    	@include margin-padding(null, 0 20px);
+    }
+    @include respond-below(custom991) {
+    	@include margin-padding(null, 0 20px);
+    }
+    @include respond-below(custom767) {
+    	@include margin-padding(null, 0 15px);
+    }
+}
+.form-group {
+    margin-bottom: $__font__size__20;
+}
+.text-muted {
+    color: $__smokey-gray !important;
+}
+.dropdown-menu {
+    background-color: $__white;
+    border: 1px solid rgba(0, 0, 0, 0.1);    
+    font-size: $__font__size__14;
+    @include rounded(3px);
+    @include box-shadow(null, null, null, null, null,$__inherit);
+    @include transform-origin(left top 0);
+}
+.row {
+	&.row-grid {
+		@include respond-below(custom1399) {
+			margin-left: -8px;
+    		margin-right: -8px;
+    	}
+		& > div {
+			@include respond-below(custom1399) {
+				padding-right: 8px;
+			    padding-left: 8px;
+			    -ms-flex: 0 0 33.333333%;
+			    flex: 0 0 33.333333%;
+			    max-width: 33.333333%;
+			}
+			@include respond-below(custom1199) {
+				-ms-flex: 0 0 50%;
+    			flex: 0 0 50%;
+    			max-width: 50%;
+			}
+			@include respond-below(custom849) {
+				-ms-flex: 0 0 100%;
+    			flex: 0 0 100%;
+    			max-width: 100%;
+			}
+			@include respond-below(custom767) {
+				-ms-flex: 0 0 50%;
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+			@include respond-below(custom575) {
+				-ms-flex: 0 0 100%;
+    			flex: 0 0 100%;
+    			max-width: 100%;
+			}
+		}
+	}
+}
+.text-sm {
+    font-size: $__font__size__14 !important;
+}
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: $__normal;
+	font-style: $__normal;
+	font-size: $__font__size__24;
+	display: $__inline__block;
+	line-height: 1;
+	text-transform: $__none;
+	letter-spacing: $__normal;
+	word-wrap: $__normal;
+	white-space: $__nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
+.small, small {
+    font-size: 80%;
+    font-weight: $__regular;
+}
+a {
+    color: $__dark-blue;
+    &:hover {
+    	color: $__primarycolor-hover;
+    }
+    &:hover, &:focus, &.active {
+	    outline: $__none;
+		text-decoration: $__none;
+    }
+}
+input {
+	&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+		box-shadow: 0 0 0px 1000px white inset !important;
+		-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+	}
+	&[type=text], &[type=password] {
+		@include appearance($__none);
+	}
+}
+input, button, a {
+	@include transition(all 0.4s ease);
+}
+button:focus {
+	outline: 0;
+}
+.btn {
+	&:focus, &.focus {
+		box-shadow: $__inherit;
+	}
+}
+.form-control {
+    border-color: $__light-gray;
+    color: $__gray;
+	font-size: $__font__size__15;
+    min-height: 46px;
+	@include margin-padding(null, 6px 15px);
+	&:focus {
+	    border-color: $__metalic__gray;
+	    box-shadow: $__none;
+	    outline: 0 $__none;
+	}
+	&::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder, &::placeholder {
+		color: $__granite;
+		font-size: $__font__size__14;
+	}
+	&::placeholder {
+		color: $__granite;
+		font-size: $__font__size__14;
+	}
+}
+.table {
+	.form-control {
+		font-size: $__font__size__14;
+		min-height: 38px;
+	}
+}
+.list-group-item {
+	border: 1px solid $__light-silver;
+}
+.container {
+	@include respond-below(custom991) {
+	    max-width: $__full__width;
+	}
+}
+.form-custom {
+    position: $__relative;
+	i {
+		color: $__ash__red;
+		@include position($__absolute, 35%, 15px, null, null);
+	}
+}

@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+	font-family: 'Material Icons';
+	font-style: $__normal;
+	font-weight: 400;
+	src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+	url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+	url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: $__normal;
+	font-style: $__normal;
+	font-size: 24px;
+	display: $__inline__block;
+	line-height: 1;
+	text-transform: $__none;
+	letter-spacing: $__normal;
+	word-wrap: $__normal;
+	white-space: $__nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
+
+$__body__font__family:'Poppins', sans-serif;
+$__home_ten__font__family:'Inter', sans-serif;
+$__feather__font__family:"feather";
+$__fontawesome__family: "Font Awesome 5 Free";
+
+$__bolder:900;
+$__bold:700;
+$__semibold:600;
+$__medium:500;
+$__regular:400;
+$__light:300;
+
+$__body__font__size:0.9375rem;
+$__menu__font__size:16px;
+$__button__font__size:18px;
+$__font__size__6:6px;
+$__font__size__9:9px;
+$__font__size__10:10px;
+$__font__size__11:11px;
+$__font__size__12:12px;
+$__font__size__13:13px;
+$__font__size__14:14px;
+$__font__size__15:15px;
+$__font__size__16:16px;
+$__font__size__17:17px;
+$__font__size__19:19px;
+$__font__size__18:18px;
+$__font__size__20:20px;
+$__font__size__22:22px;
+$__font__size__23:23px;
+$__font__size__24:24px;
+$__font__size__26:26px;
+$__font__size__28:28px;
+$__font__size__30:30px;
+$__font__size__32:32px;
+$__font__size__34:34px;
+$__font__size__36:36px;
+$__font__size__38:38px;
+$__font__size__40:40px;
+$__font__size__42:42px;
+$__font__size__44:44px;
+$__font__size__48:48px;
+$__font__size__50:50px;
+$__font__size__54:54px;
+$__font__size__60:60px;
+$__font__size__76:76px;
+
+h1{
+	font-weight:$__normal;
+	font-size:$__font__size__40;
+	@include respond-below(custom767){
+		font-size:$__font__size__26 + 1;
+	}
+}
+h2{
+	font-weight:$__normal;
+	font-size:$__font__size__30;
+	@include respond-below(custom767){
+		font-size:$__font__size__22 + 1;
+	}
+}
+h3{
+	font-weight:$__normal;
+	font-size:$__font__size__24;
+	@include respond-below(custom1023){
+		font-size:$__font__size__20;
+	}
+	@include respond-below(custom767){
+		font-size:$__font__size__16;
+	}
+}
+h4{
+	font-weight:$__normal;
+	font-size:$__font__size__18;
+	@include respond-below(custom1023){
+		font-size:$__font__size__18;
+	}
+	@include respond-below(custom767){
+		font-size:$__font__size__18;
+	}
+}
+h5{
+	font-weight:$__normal;
+	font-size:$__font__size__18 + 1;
+	@include respond-below(custom1023){
+		font-size:$__font__size__18;
+	}
+}
+h6{
+	font-weight:$__normal;
+	font-size:$__font__size__18;
+	@include respond-below(custom1023){
+		font-size:$__font__size__16;
+	}
+}
