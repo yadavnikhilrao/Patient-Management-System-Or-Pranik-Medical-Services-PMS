@@ -39,6 +39,7 @@ The primary objective of the Patient Management System is to improve the patient
 ## Usage
 1. Run the application: `python app.py`
 2. Access the application in your web browser at: `http://localhost:5000`
+3. Live Demo: [https://pranik.pythonanywhere.com/](https://pranikmedicalservices.pythonanywhere.com/)
 
 ## Contributing
 We welcome contributions from the community to enhance the Patient Management System. If you'd like to contribute, please submit your pull requests.
