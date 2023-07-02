@@ -1,0 +1,164 @@
+.check {
+  display: $__block;
+    @include margin-padding(0, 0);
+  width: 0;
+  height: 0;
+  visibility: $__hidden;
+  opacity: 0;
+  pointer-events: $__none;
+  position: $__absolute;
+  &:checked {
+    & + .checktoggle {
+      background-color: $__green_color;
+      border: 1px solid $__green_color;
+      &:after {
+        background-color: $__white;
+        left: 100%;
+        @include transform(translate(calc(-100% - 5px), -50%));
+      }
+    }
+  }
+}
+.checktoggle {
+  background-color: $__red_color;
+  border: 1px solid $__red_color;
+  border-radius: 12px;
+  cursor: $__pointer;
+  display: $__block;
+  font-size: 0;
+  height: 24px;
+  margin-bottom: 0;
+  position: $__relative;
+  width: 42px;
+  &:after {
+    content: ' ';
+    display: $__block;
+        @include position($__absolute, 50%, null, null, 0);
+    @include transform(translate(5px, -50%));
+    width: 14px;
+    height: 14px;
+    background-color: $__white;
+    border-radius: 50%;
+    transition: left 300ms ease, transform 300ms ease;
+  }
+}
+.status-toggle {
+    .check {
+        &:checked {
+            & + .checktoggle {
+                background-color: $__green;
+                border: 1px solid $__green;
+        &:after {
+          @include transform(translate(calc(-100% - 2px), -50%));
+        }
+            }
+        }
+    }
+  .checktoggle {
+    width: 41px;
+    height: 21px;
+    &::after {
+      width: 17px;
+        height: 17px;
+      @include transform(translate(2px, -50%));
+    }
+  }
+}
+.status-tog {
+  .checktoggle {
+    height: 28px;
+    width: 50px;
+    border-radius: 999px;
+    background-color: $__athens_grey;
+    border-color: $__athens_grey;
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      background-image: url(../img/icons/check.svg);
+      background-repeat: no-repeat;
+      background-size: 11px 20px;
+      width: 20px;
+      height: 20px;
+      transform: translate(3px, -50%);
+    }
+    &:after {
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/icons/x-icon.svg);
+      background-repeat: no-repeat;
+      background-size: 12px 21px;
+      transform: translate(1px, -50%);
+      background-position: center;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.06);
+    }
+  }
+  .check {
+    &:checked {
+      & + .checktoggle {
+        &:before {
+          content: ' ';
+          display: block;
+          position: absolute;
+          left: 0;
+          background-image: url(../img/icons/x-icon.svg);
+          background-repeat: no-repeat;
+          background-size: 13px 21px;
+          width: 20px;
+          height: 20px;
+          filter: brightness(0) invert(1);
+        }
+        &:after {
+          background-image: url(../img/icons/check.svg);
+          background-repeat: no-repeat;
+          background-size: 12px 21px;
+          transform: translate(calc(-100% - 1px), -50%);
+          background-position: center;
+        }
+      }
+    }
+  }
+}
+
+
+.bootstrap-tagsinput {
+  display: $__block;
+  border-radius: 5px;
+  background: $__white;
+  border: 1px solid $__white_shade;
+  height: 46px;
+  @include margin-padding(0, 4px 10px 0 10px);
+  width: $__full__width;
+  box-shadow: $__none;
+  overflow-y: $__auto;
+  .tag {
+    margin-right: 5px;
+    margin-bottom: 2px;
+    color: $__white_silver;
+    background: $__grey_whitish !important;
+    font-size: $__font__size__12;
+    font-weight: $__medium;
+    border-radius: 5px;
+    &:hover {
+      color: $__white_silver;
+    }
+    [data-role="remove"] {
+      @include position($__relative, null, null, null, 7px);
+      cursor: $__pointer;
+    }
+    [data-role="remove"]:after {
+      content: "x";
+      @include margin-padding(0, 0px 2px);
+    }
+  }
+  input {
+    line-height: 36px;
+    border: 1px solid $__transparent;
+    background: $__transparent;
+    &:focus-visible {
+      border: 1px solid $__transparent;
+    }
+  }
+}

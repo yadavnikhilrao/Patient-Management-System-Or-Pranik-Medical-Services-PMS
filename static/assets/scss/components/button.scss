@@ -1,0 +1,142 @@
+.view-btn {
+    color: $__celeste;
+    font-size: $__font__size__13;
+    border: 2px solid $__celeste;
+    text-align: $__center;
+    display: $__block;
+    font-weight: $__medium;
+    @include margin-padding(null, 6px);
+    &:hover, &:focus {
+        background-color: $__celeste;
+        color: $__white;
+    }
+}
+.book-btn {
+    background-color: $__celeste;
+    border: 2px solid $__celeste;
+    color: $__white;
+    font-size: $__font__size__13;
+    text-align: $__center;
+    display: $__block;
+    font-weight: $__medium;
+    @include margin-padding(null, 6px);
+    &:hover, &:focus {
+        background-color: $__dark-celeste;
+        border-color: $__dark-celeste;
+        color: $__white;
+    }
+}
+.submit-btn-bottom {
+    margin-bottom: 30px;
+    @include respond-below(custom767) {
+        margin-bottom: 20px;
+    }
+    @include respond-below(custom575) {
+        margin-bottom: 0.9375rem;
+    }
+}
+.bg-info-light {
+    background-color: rgba(2, 182, 179,0.12) !important;
+    color: $__info__light !important;
+}
+.bg-primary-light {
+    background-color: rgba(17, 148, 247,0.12) !important;
+    color: $__primary__light !important;
+}
+.bg-danger-light {
+    background-color: rgba(242, 17, 54,0.12) !important;
+    color: $__danger__light !important;
+}
+.bg-warning-light {
+    background-color: rgba(255, 152, 0,0.12) !important;
+    color: $__warning__light !important;
+}
+.bg-success-light {
+    background-color: rgba(15, 183, 107,0.12) !important;
+    color: $__success__light !important;
+}
+.bg-purple-light {
+    background-color: rgba(197, 128, 255,0.12) !important;
+    color: $__purple__light !important;
+}
+.bg-default-light {
+    background-color: rgba(40, 52, 71,0.12) !important;
+    color: $__default__light !important;
+}
+.change-photo-btn {
+    background-color: $__sky__blue;
+    color: $__white;
+    cursor: $__pointer;
+    display: $__block;
+    font-size: $__font__size__13;
+    font-weight: $__semibold;
+    position: $__relative;
+    text-align: $__center;
+    width: 220px;
+    @include transition(.3s);
+    @include rounded(50px);
+    @include margin-padding(0 $__auto, 10px 15px);
+}
+.btn-icon {
+    @extend %align-items-center;
+    text-align: $__center;
+    font-size: $__font__size__10;
+    width: 20px;
+    height: 20px;
+    @extend %inline-flex;
+    @extend %justify-content-center;
+    @include margin-padding(null, 0);
+    @include position($__absolute, 3px, 3px, null, null);
+}
+.btn-facebook {
+    background-color: $__lapis__blue;
+    color: $__white;
+    font-size: $__font__size__13;
+    @include margin-padding(null, 8px 12px);
+}
+.btn-google {
+    background-color: $__dark__lava__red;
+    color: $__white;
+    font-size: $__font__size__13;
+    @include margin-padding(null, 8px 12px);
+}
+.view-inv-btn {
+    font-size: $__font__size__16;
+    font-weight: $__bold;
+    @include margin-padding(null, 12px 30px);
+    @include respond-below(custom767) {
+        font-size: $__font__size__14;
+        @include margin-padding(null, 10px 30px);
+    }
+}
+.banner-btn {
+    background: $__banner-btn;
+    border-radius: 130px;
+    color: $__white;
+    font-weight: $__semibold;
+    font-size: $__font__size__14;
+    padding: 20px 30px;
+    width: $__full__width;
+    &:hover {
+        background: $__sky__01;
+        color: $__white;
+    }
+}
+.book-btn1 {
+    background-color: $__celeste;
+    border: 2px solid $__celeste;
+    color: $__white;
+    font-size: $__font__size__16;
+    text-align: $__center;
+    font-weight: $__medium;
+    padding: 6px 10px;
+    &:hover {
+        background-color: $__dark-celeste;
+        border-color: $__dark-celeste;
+        color: $__white;
+    }
+}
+.search-btn {
+    width: $__full__width;
+    margin-top: 15px;
+}
