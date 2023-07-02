@@ -1,7 +1,6 @@
 # Patient Management System (PMS)
 
-![Project Logo](./static/assets
-/img/logo.png)
+![Project Logo](./static/assets/img/logo.png)
 
 ## Table of Contents
 - [Introduction](#introduction)
