@@ -1,0 +1,60 @@
+Database Name: pms
+
+
+Create Tables 
+
+--------------------------------------
+
+
+1. registered_patients
+
+CREATE TABLE registered_patients (Patient_ID varchar(240), Email varchar(240) primary key, Name varchar(240), Date_of_Birth varchar(40), Blood_Group varchar(12), Phone varchar(14), Password varchar(40), Profile_URL varchar(30), Address varchar(240), City varchar(240), State varchar(240), Pin_Code varchar(240), Country varchar(240));
+
+
+
+2. registered_doctors
+
+CREATE TABLE registered_doctors (Doctor_ID varchar(30), Email varchar(240) PRIMARY KEY, Name varchar(240), Phone varchar(12), Gender varchar(7), Password varchar(240), Qualification varchar(240), Specialization varchar(240), Profile_URL varchar(30), Clinic_Name varchar(240), Clinic_Address varchar(240), About_Clinic text, Address_Line1 text, Address_Line2 text, City varchar(240), State varchar(240), Registration_Number varchar(240), Year varchar(10), Fee int );
+
+
+3. registered_admins
+
+CREATE TABLE registered_admins ( Admin_ID VARCHAR(30), Email VARCHAR(255) NOT NULL, Name VARCHAR(255) NOT NULL, Phone VARCHAR(20) NOT NULL, Password VARCHAR(255) NOT NULL, Profile_URL VARCHAR(255), Qualification VARCHAR(255), Job_Profile VARCHAR(255), Address VARCHAR(255), City VARCHAR(255), State VARCHAR(255), Pin_Code VARCHAR(10), Country VARCHAR(255));
+
+- Madatory to register atleast 1 admin, for accesing admin portal and able to add more admin after login
+
+INSERT INTO registered_admins (Name, Email, Phone, Password, Admin_ID, Profile_URL, Qualification, Job_Profile) VALUES("Nikhil Yadav", "yadavnikhilrao@gmail.com", '9027800200', "Nikhil1234", "CEONIKHIL04", "CEONIKHIL04.png", "MCA", "Data Scientist");
+
+
+4. appointments
+
+CREATE TABLE  appointments ( Patient_ID varchar(25), Doctor_ID varchar(25), Appointment_Date DATE, Appointment_Time TIME, Insurance VARCHAR(10), Reason text, Symptoms VARCHAR(255), Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+
+
+
+
+
+
+
+Table Name: registered_doctors
+
+Attributes: Doctor_ID, Email, Name, Phone, Gender, Password, Qualification, Specialization, Profile_URL, Clinic_Name, Clinic_Address, About_Clinic, Address_Line1, Address_Line2, City, State, Registration_Number, Year, Fee
+
+--------------------------------------
+
+Table Name: registered_patients
+
+Attributes: Patient_ID, Email, Name, Date_of_Birth, Blood_Group, Phone, Password, Profile_URL, Address, City, State, Pin_Code, Country
+
+--------------------------------------
+
+Table Name: 
+
+Attributes: Admin_ID, Email, Name, Phone, Password, Profile_URL, Qualification, Job_Profile, Address, City, State, Pin_Code, Country
+
+--------------------------------------
+
+Table Name: appointments
+
+Attributes: Patient_ID, Doctor_ID, Appointment_Date, Appointment_Time, Insurance, Reason, Symptoms, Created_at
+
