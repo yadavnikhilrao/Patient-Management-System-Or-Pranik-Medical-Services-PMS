@@ -1,0 +1,251 @@
+.nav-tabs {
+  border-bottom: 1px solid $__light-silver;
+  @include respond-below(custom767) {
+    border-bottom: 0;
+      position: $__relative;
+      background-color: $__white;
+      border: 1px solid $__light__goose;
+      @include margin-padding(null, 5px 0);
+      @include rounded(3px);
+  }
+  & > li {
+    & > a {
+      margin-right: 0;
+      color: $__dark__gray;
+      @include rounded(3px);
+      @include respond-below(custom767) {
+        border-width: 2px;
+        border-left-color: $__transparent;
+      }
+      &:hover, &:focus {
+        border-color: $__transparent;
+        color: $__dark__blue;
+        @include respond-below(custom767) {
+          background-color: $__light__white;
+        }
+      }
+      &.active {
+        @include respond-below(custom767) {
+          border-color: $__transparent $__transparent $__transparent $__sky__blue !important;
+            border-left-width: 2px;
+          }
+      }
+    }
+    &.open:not(.active) {
+      & > a, & > a:hover, & > a:focus {
+        background-color: $__light__white;
+      }
+    }
+  }
+  .nav-item {
+    @include respond-below(custom767) {
+      margin-bottom: 0;
+    }
+    &.show {
+      .nav-link {
+        @include respond-below(custom767) {
+          border-color: $__transparent $__transparent $__transparent $__sky__blue !important;
+            border-left-width: 2px;
+          }
+      }
+    }
+  }
+  .nav-link {
+    @include rounded(0);
+    @include respond-below(custom767) {
+      border-width: 2px;
+    }
+    &:focus, &:hover {
+      background-color: $__cloud__gray;
+        border-color: $__transparent;
+      color: $__dark__blue;
+    }
+  }
+  &.nav-justified {
+    @include respond-below(custom767) {
+      border-bottom: 1px solid $__light__goose;
+    }
+    & > li {
+      & > a {
+        margin-bottom: 0;
+        @include rounded(0);
+        &:hover, &:focus {
+          border-bottom-color: $__light__goose;
+        }
+        &.active {
+          @include respond-below(custom767) {
+            border-color: $__transparent $__transparent $__transparent $__sky__blue;
+              border-left-width: 2px !important;
+          }
+        }
+      }
+    }
+    &.nav-tabs-solid {
+      & > li {
+        & > a {
+          color: $__dark__blue;
+        }
+      }
+    }
+    &.nav-tabs-top {
+      border-bottom: 1px solid $__light__goose;
+      & > li {
+        & > a, & > a:hover, & > a:focus {
+          border-width: 2px 0 0 0;
+        }
+      }
+    }
+  }
+  &.nav-tabs-top {
+    & > li {
+      margin-bottom: 0;
+      & > a {
+        border-width: 2px 0 0 0;
+        &.open {
+          border-top-color: $__light__goose;
+        }
+        &:hover, &:focus {
+        border-width: 2px 0 0 0;
+        border-top-color: $__light__goose;
+        }
+        &.active, &.active:hover, &.active:focus {
+          border-top-color: $__sky__blue;
+        }
+      }
+      & + li {
+        & > a {
+          margin-left: 1px; 
+        }
+      }
+    }
+  }
+  &.nav-tabs-bottom {
+    & > li {
+      & > a {
+        &.active, &.active:hover, &.active:focus {
+          border-bottom-width: 2px;
+          border-color: $__transparent;
+          border-bottom-color: $__sky__blue;
+          background-color: $__transparent;
+          @include transition(none 0s ease 0s);
+          @include respond-below(custom767) {
+            background-color: $__dark__light;
+            }
+        }
+      }
+    }
+  }
+  .nav-tabs-justified {
+    @include respond-below(custom767) {
+      border-bottom: 1px solid $__light__goose;
+    }
+    & > li {
+      & > a {
+        border-radius: 0;
+        margin-bottom: 0;
+        &:hover, &:focus {
+          border-bottom-color: $__light__goose;
+        }
+        &.active, &.active:focus, &.active:hover {
+          border-width: 0 0 0 2px;
+          border-left-color: $__sky__blue;
+        }
+      }
+    }
+    &.nav-tabs-solid {
+      & > li {
+        & > a {
+          border-color: $__transparent;
+        }
+      }
+    }
+    &.nav-tabs-top {
+      border-bottom: 1px solid $__light__goose;
+      & > li {
+        & a, & a:hover, & a:focus {
+          border-width: 2px 0 0 0;
+        } 
+      }
+    }
+  } 
+  &.nav-tabs-solid {
+    background-color: $__light__white;
+    border: 0;
+    @include respond-below(custom767) {
+      @include margin-padding(null, 5px);
+    }
+    & > li {
+      margin-bottom: 0;
+      & a {
+        color: $__dark__blue;
+        &.active, &.active:hover, &.active:focus {
+          background-color: $__sky__blue;
+          border-color: $__sky__blue;
+          color: $__white;
+        } 
+      }
+      & > a {
+        border-color: $__transparent;       
+        @include respond-below(custom767) {
+          border-left-width: 0 !important;
+        }
+        &:hover, &:focus {
+          background-color: $__dark__light;
+        }
+        &.active, &.active:hover, &.active:focus {
+          background-color: $__sky__blue;
+          border-color: $__sky__blue;
+          color: $__white;
+        }
+      }
+    }
+    .active {
+      & > a, & a:hover, & a:focus {
+        background-color: $__sky__blue;
+        border-color: $__sky__blue;
+        color: $__white;
+      }
+    }
+    &.nav-tabs-rounded {
+      @include rounded(50px);     
+      @include respond-below(custom767) {
+        @include rounded(5px);  
+      }
+      & > li {
+        & > a {
+          @include rounded(50px);
+          &.active, &.active:hover, &.active:focus {
+            @include rounded(50px);
+            @include respond-below(custom767) {
+              border-color: $__transparent $__transparent $__transparent $__sky__blue !important;
+                border-left-width: 2px;
+              }
+          }
+        }
+      }
+      @include respond-below(custom767) {
+        @include rounded(5px);
+      }
+    }
+    & > .open:not(.active) {
+      & > a {
+        background-color: $__dark__light;
+        border-color: $__transparent;
+      }
+    }
+  }
+  .nav-link {
+    &.active {
+      @include respond-below(custom767) {
+        border-color: $__transparent $__transparent $__transparent $__sky__blue !important;
+          border-left-width: 2px;
+        }
+    }
+  }
+}
+.tab-content {
+  padding-top: 20px;
+}
+.card-header-tabs {
+    border-bottom: 0;
+}

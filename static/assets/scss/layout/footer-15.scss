@@ -1,0 +1,270 @@
+
+
+.footer {
+    &.footer-fifteen {
+        position: $__relative;
+        @include margin-padding(null, 52px 0 0 0);
+        background-color: $__white;
+        background-image: url(../img/footer-fift-bg.png);
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
+        @include respond-below(custom991) {
+            background-image: $__none;
+            background-color: $__blue__14;
+        }
+        .footer-top-fifteen {
+            padding: 0;
+            .footer-left-fifteen {
+                .footer-fifteen-image {
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: $__white;
+                    margin-bottom: 25px;
+                    line-height: 27px;
+                }
+                .subscribe-fifteen {
+                    font-size: $__font__size__18;
+                    color: $__white;
+                    margin-bottom: 10px;
+                }
+                .subscribe-form-fifteen {
+                    width: 83%;
+                    margin-bottom: 25px;
+                    .form-control {
+                        border-radius: 10px;
+                        min-height: 55px;
+                        font-weight: $__regular;
+                        font-size: $__font__size__16;
+                        padding: 10px 130px 10px 10px;
+                        @include respond-below(custom767) {
+                            font-size: $__font__size__14;
+                        }
+                        &::placeholder {
+                            color: $__cherry_grey;
+                            font-weight: $__regular;
+                            font-size: $__font__size__16;
+                            @include respond-below(custom767) {
+                                font-size: $__font__size__14;
+                            }
+                        }
+                    }
+                    .btn {
+                        @include margin-padding(null, 10px 15px);
+                        background: $__light__celeste;
+                        border-radius: 5px;
+                        border: none;
+                        right: 10px;
+                        @include respond-below(custom767) {
+                            @include margin-padding(null, 10px 10px);
+                        }
+                        &:hover {
+                            background: $__blue__14;
+                            box-shadow: inset 0 0 0 50px $__blue__14;
+                            color: $__white;
+                        }
+                    }
+                } 
+                .subscribe-fifteentwo {
+                    font-size: $__font__size__16;
+                    color: $__white;
+                    font-weight: $__semibold;
+                    margin-bottom: 15px;
+                }
+                .footer-fifteen-image-2 {
+                    @include respond-below(custom991) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            .footer-right-fifteen {
+                margin-left: 18px;
+                .subscribe-fifteenthree {
+                    font-size: $__font__size__18;
+                    color: $__midnight_black;
+                    font-weight: $__semibold;
+                    margin-bottom: 15px;
+                    @include respond-below(custom991) {
+                        color: $__white;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    display: $__flex;
+                    align-items: $__center;
+                    flex-wrap: $__wrap;
+                    li {
+                        @include margin-padding(0 25px 25px 0, null);
+                        text-decoration: underline;
+                        line-height: 19px;
+                        @include respond-below(custom991) {
+                            @include margin-padding(0 15px 15px 0, null);
+                            text-decoration: none;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        a {
+                            color: $__bodycolor;
+                            &:hover {
+                                color: $__blue_color1;
+                            }
+                            @include respond-below(custom991) {
+                                color: $__white;
+                            }
+                        }
+
+                    }
+                }
+                p {
+                    color: $__bodycolor;
+                    @include respond-below(custom991) {
+                        color: $__white;
+                    }
+                }
+                .user-details-fift {
+                    ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        li {
+                            text-decoration: none;
+                            margin: 0 15px 0 0;
+                            .contact-fifteen {
+                                display: $__flex;
+                                align-items: $__center;
+                                justify-content: $__start;
+                                border: 1px solid #E5E5EB;
+                                border-radius: 10px;
+                                background: $__white;
+                                @include margin-padding(0 0 15px 0,10px);
+                                overflow: hidden;
+                                .contact-form-fift {
+                                    @extend %flex-align-center;
+                                    width: 35px;
+                                    height: 35px;
+                                    border-radius: 100px;
+                                    background: $__blue__14;
+                                    font-size: $__font__size__17;
+                                    color: $__white;
+                                    margin-right: 7px;
+                                }
+                                .contact-content-fift {
+                                    h6 {
+                                        font-size: $__font__size__16;
+                                        font-weight:$__semibold;
+                                        margin-bottom: 5px;
+                                        @include respond-below (custom1399) {
+                                            font-size: $__font__size__14;
+                                        }
+                                    }
+                                    span {
+                                        color: $__lite_dark_grey ;
+                                        margin-bottom: 0;
+                                        font-size: $__font__size__13;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .footer-fift-selects {
+                    position: $__relative;
+                    display: $__flex;
+                    align-items: $__center;
+                    justify-content: $__space_between;
+                    padding-bottom: 25px;
+                    @include respond-below(custom479) {
+                        display: $__block;
+                    }
+                    .footer-select {
+                        display: $__inline__block;
+                        @include respond-below(custom479) {
+                            margin-bottom: 15px;
+                        }
+                        img {
+                            @include position($__absolute, 10px, null, null, 10px);
+                            z-index: 9;
+                        }
+                        .select2-container .select2-selection--single {
+                            border: 1px solid #E5E5EB;
+                            border-radius: 10px;
+                        }
+                        .select2-selection__rendered {
+                            padding-left: 43px;
+                        }
+                        .select2-container--default .select2-selection--single .select2-selection__arrow {
+                            right: 1px;
+                        }
+                        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+                            border-color: #000000 transparent transparent;
+                        }
+                    }
+                    .social-icon {
+                        ul {
+                            li {
+                                margin: 0 10px 0 0;
+                                text-decoration: none;
+                                a {
+                                    width: 44px;
+                                    height: 43px;
+                                    border-radius: 100px;
+                                    background: $__blue__14;
+                                    color: $__white;
+                                    font-size: $__font__size__18;
+                                    @extend %flex-align-center;
+                                    &:hover {
+                                        background: #0CE0FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .footer-bottom {
+                    &.footer-bottom-fifteen {
+                        .copyright {
+                            border-top: 1px solid #E5E5EB;
+                            padding: 25px 0 25px 0;
+                            .copyright-text {
+                                @include respond-below(custom767) {
+                                    text-align: $__center;
+                                    margin-bottom: 10px;
+                                }
+                                p {
+                                    margin-bottom: 0;
+                                    font-size: $__font__size__14;
+                                }
+                            }
+                            .copyright-menu {
+                                .policy-menu {
+                                    justify-content: $__end;
+                                    @include respond-below(custom767) {
+                                        justify-content: $__center;
+                                    }
+                                    li {
+                                        text-decoration: $__none;
+                                        margin: 0 10px 0 0;
+                                        @include respond-below(custom1199) {
+                                            margin: 0 15px 15px 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,183 @@
+
+.footer {
+    &.footer-thirteen {
+        background: $__white;
+        background-image: url(../img/bg/Map-thirteen.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: $__relative;
+        .footer-top {
+            @include margin-padding (0, 80px 0);
+            @include respond-below(custom991) {
+                @include margin-padding (0, 50px 0);
+            }
+            .footer-widget {
+                .footer-title {
+                    font-size: $__font__size__18;
+                    font-weight: $__semibold;
+                    color: $__midnight_black;
+                    margin-bottom: 22px;
+                }
+                ul {
+                    li {
+                        margin-bottom: 4px;
+                        a {
+                            color: $__bodycolor;
+                            font-size: $__font__size__14;
+                            font-weight: $__regular;
+                            padding-left: 0;
+                            &::before {
+                                content: '';
+                            }
+                            &:hover {
+                                color: $__blue__14;
+                                padding-left: 10px;
+                            }
+                        }
+                        &:first-child {
+                            a {
+                                font-weight: $__semibold;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-menu-thirteen {
+                margin-top: 43px;
+                .footer-title {
+                    display: $__none;
+                }
+                @include respond-below(custom991) {
+                    margin-top: 0;
+                    .footer-title {
+                        display: $__block;
+                    }
+                }
+            }
+            // .footer-menu-thirteen {
+            //     margin-top: 43px;
+            // }
+            .footer-contents-thirteen-main {
+                @include margin-padding (60px 0 0 0, null);
+                @include respond-below(custom991) {
+                    @include margin-padding (20px 0 0 0, null);
+                }
+                .footer-thirt-inner {
+                    @include respond-below(custom991) {
+                        margin-bottom: 10px;
+                    }
+                    h4 {
+                        font-weight: $__semibold;
+                        color: #00438A;
+                        margin-bottom: 6px;
+                    }
+                    p {
+                        font-size: $__font__size__14;
+                        color: rgba(147, 163, 180, 0.8);
+                        font-weight: $__regular;
+                        margin-bottom: 0;
+                        @include respond-below(custom991) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .subscribe-form {
+                    margin-bottom: 0;
+                    max-width: 430px;
+                    @include respond-below (custom1300) {
+                        max-width: 385px;
+                    }
+                    .form-control {
+                        min-height: 56px;
+                        border: 1px solid #AAB4EE;
+                        border-radius: 10px;
+                        padding: 10px 112px 10px 15px;
+                        &::placeholder {
+                            color: $__cool_blue;
+                            font-size: $__font__size__14;
+                            font-weight: $__semibold;
+
+                        }
+                    }
+                    .btn {
+                        padding: 17px 40px;
+                        right: -45%;
+                        border-radius: 10px;
+                        @include respond-below (custom1300) {
+                            padding: 17px 30px;
+                        }
+                        @include respond-below(custom1199) {
+                            padding: 17px 23px;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            .copyright {
+                border-top: 1px solid rgba(52, 52, 52, 0.1);
+                padding: 20px 0;
+                @include respond-below(custom991) {
+                    text-align: $__center;
+                }
+                .copyright-img {
+                    @include respond-below(custom991) {
+                        margin-bottom: 15px;
+                    }
+                }
+                .copyright-text {
+                    @include respond-below(custom991) {
+                        margin-bottom: 15px;
+                    
+                    }
+                    p {
+                        font-size: $__font__size__14;
+                        font-weight: $__medium;
+                        line-height: 20px;
+                        letter-spacing: 0.005em;
+                        text-align: $__center;
+                        color: $__bodycolor;
+                    }
+                }
+                .copyright-menu {
+                    @include respond-below(custom991) {
+                        margin-bottom: 15px;
+                    }
+                    ul {
+                        @include respond-below(custom991) {
+                            text-align: center;
+                        }
+                        li {
+                            a {
+                                color: #00438A;
+                                font-size: $__font__size__18;
+                                &:hover {
+                                    color: $__blue__14;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-bg-icon {
+
+            img {
+                position: $__absolute;
+                z-index: 0;
+                &:nth-child(1) {
+                    bottom: 20%;
+                    left: 0;
+                }
+                &:nth-child(2) {
+                    top: 20%;
+                    right: -7%;
+                    @include respond-below(custom991) {
+                        display: $__none;
+                    }
+                }
+            }
+        }
+    }
+}

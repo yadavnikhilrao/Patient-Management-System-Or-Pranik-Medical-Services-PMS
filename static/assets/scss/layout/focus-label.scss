@@ -1,0 +1,103 @@
+.form-focus {
+  height: 50px;
+  position: $__relative;
+  .focus-label {
+    font-size: $__font__size__14;
+    font-weight: $__regular;
+    pointer-events: $__none;
+    @include transform(translate3d(0, 22px, 0) scale(1));
+    @include transform-origin(left top);
+    @include transition(240ms);
+    z-index: 1;
+    color: $__dark__beige;
+    margin-bottom: 0;
+    @include position($__absolute, -8px, null, null, 12px);
+  }
+  &.focused {
+    .focus-label {
+      opacity: 1;
+      top: -18px;
+      font-size: $__font__size__12;
+      z-index: 1;
+    }
+    .form-control {
+      &::-webkit-input-placeholder {
+        color: $__metalic__gray;
+      }
+    }
+  }
+  .form-control {
+    height: 50px;
+    @include margin-padding(null, 21px 12px 6px);
+    &:focus ~ .focus-label, &:-webkit-autofill ~ .focus-label {
+      opacity: 1;
+      font-weight: 400;
+      top: -18px;
+      font-size: $__font__size__12;
+      z-index: 1;
+    }
+    &::-webkit-input-placeholder {
+      color: $__transparent;
+      @include transition(240ms);
+    }
+    &:focus::-webkit-input-placeholder {
+      transition: $__none;
+    }
+  }
+  &.select-focus {
+    .focus-label {
+      opacity: 1;
+      font-weight: $__light;
+      top: -20px;
+      font-size: $__font__size__12;
+      z-index: 1;
+    }
+  }
+  .select2-container {
+    .select2-selection--single {
+      border: 1px solid $__metallic-silver;
+      height: 50px;
+      .select2-selection__rendered {
+        padding-right: 30px;
+        padding-left: 15px;
+      }
+    }
+  }
+  .select2-container--default {
+    .select2-selection--single {
+      .select2-selection__arrow {
+        height: 48px;
+        right: 7px;
+        b {
+          border-color: $__goose-gray $__transparent $__transparent;
+          border-style: solid;
+          border-width: 6px 6px 0;
+          height: 0;
+          margin-left: -10px;
+          margin-top: -2px;
+          width: 0;
+          @include position($__absolute, 50%, null, null, 50%);
+        }
+      }
+      .select2-selection__rendered {
+        color: $__iridium;
+        font-size: $__font__size__14;
+        font-weight: $__normal;
+        line-height: 38px;
+      }
+    }
+    &.select2-container--open {
+      .select2-selection--single {
+        .select2-selection__arrow {
+          b {
+            border-color: $__transparent $__transparent $__metallic-silver;
+            border-width: 0 6px 6px;
+          }
+        }
+      }
+    }
+    .select2-results__option--highlighted[aria-selected] {
+      background-color: $__light__chilli__pepper;
+    }
+  }
+}

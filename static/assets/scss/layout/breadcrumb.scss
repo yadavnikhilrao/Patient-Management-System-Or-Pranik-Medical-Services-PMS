@@ -1,0 +1,36 @@
+.breadcrumb-bar {
+    background-color: $__blue;
+    @include margin-padding(null, 15px 0);
+    @include respond-below(custom767) {
+      height: $__auto;
+    }
+    .breadcrumb-title {
+      color: $__white;
+      font-size: $__font__size__22;
+      font-weight: $__bold;
+      @include margin-padding(5px 0 0, null);
+      @include respond-below(custom767) {
+        font-size: $__font__size__18;
+      }
+  }
+  .page-breadcrumb {
+    ol {
+        background-color: $__transparent;
+        font-size: $__font__size__12;
+        margin-bottom:0;
+        @include margin-padding(null, 0);
+        li {
+          &.active {
+            color:$__white;
+          }
+          a {
+            color:$__white;
+          }
+        }
+    }
+    .breadcrumb-item + .breadcrumb-item:before {
+      color: $__white;
+      font-size: $__font__size__10;
+    }
+  }
+}

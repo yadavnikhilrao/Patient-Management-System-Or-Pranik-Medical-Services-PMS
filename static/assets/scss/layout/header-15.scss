@@ -1,0 +1,63 @@
+
+
+.header {
+    &.header-fourteen {
+        &.header-fifteen {
+            .header-nav {
+                .logo {
+                    @include respond-below(custom1199) {
+                        margin-right: 0;
+                    }
+                }
+                @include respond-below(custom1399) {
+                    justify-content: start;
+                }
+                @include respond-below(custom991) {
+                    justify-content: space-between;
+                }
+                .main-menu-wrapper {
+                    .main-nav {
+                        li {
+                            @include respond-below(custom1399) {
+                                margin-right: 20px;
+                            }
+                            @include respond-below(custom1199) {
+                                margin-right: 5px;
+                            }
+                            a {
+                                color: $__midnight_black;
+                                @include respond-below(custom991) {
+                                    color: $__white
+                                }
+                            }
+                        }
+                    }
+                }
+                .header-navbar-rht {
+                    .login-in-fourteen {
+                        .reg-btn {
+                            @include margin-padding(null, 18px 15px);
+                            background: $__cyan_color;
+                            color: $__white;
+                            border-radius: 10px;
+                            font-size: $__font__size__14;
+                            @include respond-below(custom1399) {
+                                @include margin-padding(null, 13px 10px);
+                            }
+                            @include respond-below(custom1199) {
+                                @include margin-padding(null, 10px 5px);
+                            }
+                            @include respond-below(custom991) {
+                                @include margin-padding(null, 13px 10px);
+                            }
+                            &.reg-btn-fourteen {
+                                background: $__lite_orange;
+                                color: $__white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

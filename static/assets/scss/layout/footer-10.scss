@@ -1,0 +1,74 @@
+.footer {
+    &.footer-one {
+        &.footer-ten {
+            background: #F8FAFC;
+            position: relative;
+            .footer-ten-bg {
+                img {
+                    position: absolute;
+                    &:nth-child(1) {
+                        left: 0;
+                    }
+                    &:nth-child(2) {
+                        right:0;
+                        bottom: 0;
+                    }
+                    &:nth-child(3) {
+                        left: 50%;
+                        transform: translate(-50%, 100%);
+                    }
+                }
+            }
+            .footer-details {
+                padding-bottom: 50px;
+                border-bottom: 1px solid #E2E8F0;
+                margin-bottom: 50px;
+            }
+            .footer-top {
+                .footer-widget {
+                    &.footer-menu {
+                        ul {
+                            list-style: disc;
+                            padding-left: 15px;
+                        }
+                    }
+                   .footer-about-content {
+                    p {
+                        padding-bottom: 24px;
+                    }
+                   }
+                }
+            }
+            .mail-note {
+                color: #6B7280;
+            }
+            .footer-map {
+                border-radius: 35px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+            .footer-bottom {
+                background: $__white;
+                .copyright {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    .policy-menu {
+                        li {
+                            a {
+                                color: #6B7280;
+                                font-weight: 400;
+                                &:hover {
+                                    color: $__blue__14;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,140 @@
+
+
+.header {
+    &.header-fourteen {
+        &.header-sixteen {
+            box-shadow: 0px 10px 40px 10px rgba(0, 0, 0, 0.08);
+            .header-nav {
+                .logo {
+                    @include respond-below(custom1199) {
+                        margin-right: 30px;
+                    }
+                    @include respond-below(custom991) {
+                        margin-right: 0;
+                    }
+                }
+                @include respond-below(custom1399) {
+                    justify-content: start;
+                }
+                @include respond-below(custom991) {
+                    justify-content: space-between;
+                }
+                .bar-icon {
+                    span {
+                        background: $__blue__14;
+                    }
+                }
+                .main-menu-wrapper {
+                    .main-nav {
+                        li {
+                            &:last-child {
+                                margin-right: 30px;
+                                @include respond-below(custom1199) {
+                                    margin-right: 10px;
+                                }
+                            }
+                            @include respond-below(custom1199) {
+                                margin-right: 10px;
+                            }
+                            a {
+                                color: $__midnight_black;
+                                @include respond-below(custom991) {
+                                    color: $__white;
+                                }
+                            }
+                            .submenu {
+                                a {
+                                    color: $__midnight_black;
+                                    @include respond-below(custom991) {
+                                        color: $__white;
+                                    }
+                                }
+                            }
+                            &.active {
+                                a {
+                                    color: $__broken_blue;
+                                    font-weight: $__bold;
+                                }
+                                .submenu {
+                                    a {
+                                        color: $__midnight_black;
+                                        font-weight: $__medium;
+                                        &.active {
+                                            color: $__broken_blue;
+                                            font-weight: $__medium;
+                                            
+                                       }
+                                    }
+                                   
+                                    a {
+                                        color: $__midnight_black;  
+                                        @include respond-below(custom991) {
+                                            color: $__white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .searchbar {
+                            @include respond-below(custom991) {
+                                display: $__none;
+                            }
+                            a {
+                                i {
+                                    font-size: $__font__size__18;
+                                    color: $__bodycolor;
+                                    &:hover {
+                                        color: $__blue_color1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .header-navbar-rht {
+                    .login-in-sixteen {
+                        .reg-btn {
+                            @include margin-padding(null, 12px 14px);
+                            background: $__blue__14;
+                            box-shadow: inset 0 0 0 0 $__blue__14;
+                            color: $__white;
+                            border-radius: 6px;
+                            font-size: $__font__size__14;
+                            font-weight: $__semibold;
+                            @include transition(all 0.7s);
+                            &:hover {        
+                                background: $__white;
+                                color: $__blue_color1;
+                                @include transition(all 0.7s);
+                                box-shadow: inset 0 60px 0 0 $__white;
+                            }
+                            @include respond-below(custom1399) {
+                                @include margin-padding(null, 13px 10px);
+                            }
+                            @include respond-below(custom1199) {
+                                @include margin-padding(null, 10px 5px);
+                            }
+                            @include respond-below(custom991) {
+                                @include margin-padding(null, 13px 10px);
+                            }
+                            &.reg-btn-sixteen {
+                                background: transparent;
+                                color: $__midnight_black;
+                                border: none;
+                                font-weight: $__semibold;
+                                box-shadow: inset 0 0 0 0 $__blue_color1;
+                                @include transition(all 0.7s);
+                                &:hover {        
+                                    background: $__blue_color1;
+                                    color: $__white;
+                                    box-shadow: inset 0 60px 0 0 $__blue_color1;
+                                    @include transition(all 0.7s);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

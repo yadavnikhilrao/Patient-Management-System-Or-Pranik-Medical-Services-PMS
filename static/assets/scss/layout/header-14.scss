@@ -1,0 +1,140 @@
+
+
+.header {
+    &.header-fourteen {
+        .header-nav {
+            background-color: transparent;
+            border-bottom: none;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+            .logo {
+                @include respond-below(custom1199) {
+                    margin-right: 0;
+                }
+            }
+            @include respond-below(custom1199) {
+                justify-content: start;
+            }
+            @include respond-below(custom991) {
+                justify-content: space-between;
+            }
+            .main-menu-wrapper {
+                .main-nav {
+                    .has-submenu {
+                        @include respond-below(custom1199) {
+                            margin-right: 10px;
+                        }
+                        a {
+                            color: $__white;
+                        }
+                        .submenu {
+                            a {
+                                color: $__midnight_black;
+                                @include respond-below(custom991) {
+                                    color: $__white;
+                                }
+                            }
+                        }
+                        &.active {
+                            a {
+                                color: $__laysgreen;
+                                font-weight: $__bold;
+                            }
+                            .submenu {
+                                a {
+                                    color: $__midnight_black;
+                                    font-weight: $__medium;
+                                    &.active {
+                                        color: $__laysgreen;
+                                        font-weight: $__medium;
+                                        
+                                   }
+                                }
+                               
+                                a {
+                                    color: $__midnight_black;  
+                                    @include respond-below(custom991) {
+                                        color: $__white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .header-navbar-rht {
+                padding: 0;
+                margin: 0;
+                li {
+                    @include margin-padding(null, 0 10px 0 0);
+                    &.login-link { 
+                        display: none;
+                    }
+                    &.searchbar-fourteen {
+                        a {
+                            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                            @extend %flex-align-center;
+                            background: $__white;
+                            border: 1px solid $__greymax;
+                            width: 38px;
+                            height: 38px;
+                            border-radius: 35px;
+                            @include margin-padding(null, 0);
+                            transition: 0.5s;
+                            &:hover {
+                                background: $__blue_color1;
+                                color: $__white;
+                                border: 1px solid $__blue_color1;
+                                transition: 0.5s;
+                                a {
+                                    color: $__white ;
+                                }
+                            }
+                        }
+                    }
+                    &.login-in-fourteen {
+                        .reg-btn {
+                            background: transparent;
+                            color: $__white;
+                            box-shadow: none;
+                            border: none;
+                            font-size: $__font__size__15;
+                            font-weight: $__semibold;
+                            padding: 10px 12px;
+                            transition: 0.5s;
+                            @include respond-below(custom1199) {
+                                padding: 10px 5px;
+                            }
+                            &:hover {
+                                background: $__laysgreen;
+                                color: $__thunderblue;
+                                transition: 0.5s;
+                            }
+                            &.reg-btn-fourteen {
+                                background: $__laysgreen;
+                                color: $__thunderblue;
+                                transition: 0.5s;
+                                font-size: $__font__size__15;
+                                font-weight: $__semibold;
+                                &:hover {
+                                    background: $__white;
+                                    color: $__thunderblue;
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.header-fixed {
+        position: $__fixed;
+        display: $__block;
+        width: $__full__width;
+        z-index: 9999;
+        box-shadow: $__inherit;
+        // background: rgb(14, 130, 253);
+    } 
+}

@@ -1,0 +1,209 @@
+table {
+  &.table {
+    color: $__dark__blue;
+    max-width: $__full__width;
+    margin-bottom: 0;
+    width: $__full__width;
+    thead {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      tr {
+        th {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        &:last-child {
+          border-color: $__transparent;
+        }
+      }
+    }
+    &.table-center {
+      td, th {
+        vertical-align: $__middle;
+      }
+    }
+    & > tbody {
+      & > tr {
+        & > th {
+          border-top: 0;
+          @include margin-padding(null, 10px 8px);
+        }
+      }
+    }
+    .no-border {
+      & > tbody {
+        & > tr {
+          & > th {
+            border-top: 0;
+            @include margin-padding(null, 10px 8px);
+          }
+        }
+        & > tfoot, thead {
+          & > tr {
+            & > th, & > td {
+              border-top: 0;
+              @include margin-padding(null, 10px 8px);
+            }
+          }
+        }
+      }
+    }
+    .dataTable {
+      border-collapse: collapse !important;
+    }
+  }
+  .table-striped {
+    thead {
+      tr {
+        border-color: $__transparent;
+      }
+    }
+    tbody {
+      tr {
+        border-color: $__transparent;
+        &:nth-of-type(even) {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        &:nth-of-type(odd) {
+          background-color: rgba(235, 235, 235, 0.4);
+        }
+      }
+    }
+    & > tbody {
+      & > tr {
+        &:nth-of-type(2n+1) {
+          background-color: $__light-pale-blue;
+        }
+      }
+    }
+  }
+  .table-bordered {
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    th, td {
+      border-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+  .table-nowrap td, .table-nowrap th {
+    white-space: $__nowrap
+  }
+  &.table {
+    td h2 {
+      display: $__inline__block;
+      font-size: $__inherit;
+      font-weight: $__regular;
+      vertical-align: $__middle;
+      @include margin-padding(0, 0);
+      .table-avatar {
+        @extend %align-items-center;
+        @extend %inline-flex;
+          font-size: $__inherit;
+          font-weight: $__regular;
+          vertical-align: $__middle;
+        white-space: $__nowrap;
+        @include margin-padding(0, 0);
+      }
+      a {
+        color: $__dark__blue;
+        &:hover {
+          color: $__primarycolor-hover;
+        }
+      }
+      span {
+        color: $__dark__gray;
+        display: $__block;
+        font-size: $__font__size__12;
+        margin-top: 3px;
+      }
+      &.table-avatar {
+          font-size: $__inherit;
+          font-weight: $__regular;
+          vertical-align: $__middle;
+          white-space: $__nowrap;
+          @extend %inline-flex;
+          @extend %align-items-center;
+          @include margin-padding(0, 0);
+      }
+    }
+  }
+  .table-hover {
+    tbody {
+      tr {
+        &:hover {
+          background-color: $__mix__gray;
+          & td {
+            color: $__dark-slate-blue;
+          }
+        }
+      }
+    }
+  }
+}
+.table-hover {
+    tbody {
+      tr {
+        &:hover {
+          background-color: $__mix__gray;
+          & td {
+            color: $__dark-slate-blue;
+          }
+        }
+      }
+    }
+  }
+.card-table {
+  card-body {
+    @include margin-padding(null, 0);
+    .table {
+      & > thead {
+        & > tr {  
+          &> th {
+            border-top: 0;
+          }
+        }
+      }
+      tr {
+        th, td {
+          border-top: 1px solid $__metalic__blue;
+            @include margin-padding(null, 1rem 0.75rem);
+            white-space: $__nowrap;
+          &:first-child {
+              padding-left: 1.5rem;
+          }
+          &:last-child {
+              padding-right: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+.card-table {
+  .card-body {
+      padding: 0;
+      .table {
+        & > thead {
+          & > tr {
+            & > th {
+              border-top: 0;
+            }
+          }
+        }
+        tr {
+          th, td {
+            border-top: 1px solid $__metalic__blue;
+            white-space: $__nowrap;
+            @include margin-padding(null, 1rem 0.75rem);
+            &:first-child {
+              padding-left: 1.5rem;
+            }
+            &:last-child {
+              padding-right: 1.5rem;
+            }
+          }
+        }
+      }
+  }
+}

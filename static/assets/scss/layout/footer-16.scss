@@ -1,0 +1,72 @@
+.footer {
+    &.footer-one {
+        &.footer-sixteen {
+            background: $__white;
+            border-top: 1px solid #E2E2E2;
+            position: $__relative;
+            background-image: url(../img/map-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            .footer-top {
+                .footer-widget  {
+                    .footer-about-content {
+                        max-width: $__none;
+                        margin-bottom: 30px;
+                    }
+                    .subscribe-form {
+                        margin-bottom: 0;
+                        .btn {
+                            border: 1px solid $__blue_color1;
+                            background: $__blue_color1;
+                            &:hover {
+                                border: 1px solid $__blue__14;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-bottom {
+                .copyright {
+                    .copyright-text {
+                        @include respond-below (custom575) {
+                           margin-bottom: 10px;
+                        }
+                    }
+                    .copyright-menu {
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            display: $__flex;
+                            align-items: $__center;
+                            justify-content: $__end;
+                            @include respond-below (custom767) {
+                                justify-content: $__center;
+                            }
+                            li {
+                                margin-right: 10px;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                a {
+                                    width: 24px;
+                                    height: 24px;
+                                    border-radius: 50%;
+                                    background: $__midnight_black;
+                                    color: $__white;
+                                    @extend %flex-align-center;
+                                    font-size: $__font__size__12;
+                                    &:hover {
+                                        background: $__blue__14;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

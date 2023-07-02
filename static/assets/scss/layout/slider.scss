@@ -1,0 +1,106 @@
+.carousel-fade {
+    .carousel-item {
+        opacity: 0;
+        transition-duration: .6s;
+        transition-property: opacity;
+        &.active {
+            opacity: 1;
+        }
+    }
+    .carousel-item-next {
+        @include transform(translateX(0));
+        @include transform(translate3d(0, 0, 0));
+        .carousel-item-left {
+            opacity: 1;
+        }
+    }
+    .carousel-item-prev {
+        @include transform(translateX(0));
+        @include transform(translate3d(0, 0, 0));
+        .carousel-item-right {
+            opacity: 1;
+        }
+    }
+    .active {
+        @include transform(translateX(0));
+        @include transform(translate3d(0, 0, 0));
+        .carousel-item-left, .carousel-item-right {
+            opacity: 0;
+            @include transform(translateX(0));
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+}
+.carousel-item {
+    height: 75vh;
+    min-height: 350px;
+    background: no-repeat $__center $__center scroll;
+    -webkit-background-size: $__cover;
+    -moz-background-size: $__cover;
+    -o-background-size: $__cover;
+    background-size: $__cover;
+    z-index: -1 !important;
+  }
+  .divider {
+    .carousel-caption {
+        @include position($__absolute, 110px, 0, 20px, 5%);
+    }
+  }
+  .carousel-caption {
+    z-index: 10;
+    padding-bottom: 20px;
+    color: $__white;
+    @include position($__absolute, 110px, 0, 20px, 15%);
+    span {
+        font-size: $__font__size__32;
+        font-weight: $__bold;
+        color: rgb(46, 56, 66);
+    }
+    h2 {
+        font-size: $__font__size__54;
+        font-weight: $__bold;
+        color: rgb(30, 92, 146);
+    }
+    p {
+        font-size: $__font__size__18;
+        font-weight: $__bold;
+        color: rgb(46, 56, 66);
+    }
+}
+.carousel-inner {
+    @include respond-below(custom991) {
+        height: 430px;
+    }
+    @include respond-below(custom767) {
+        height: 200px;
+    }
+}
+.slide-nav-1 button.owl-next, .slide-nav-1 button.owl-prev, .slide-nav-2 button.owl-next, .slide-nav-2 button.owl-prev, .slide-nav-3 button.owl-next, .slide-nav-3 button.owl-prev, .slide-nav-4 button.owl-next, .slide-nav-4 button.owl-prev {
+    width: 34px;
+    height: 34px;
+    background: $__sky__01;
+    text-shadow: $__none;
+    top: 4px;
+    cursor: $__pointer;
+    border: 0;
+    color: $__white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    @include transform(rotate(-44deg));
+    @include respond-below(custom767) {
+        width: 28px;
+        height: 28px;
+    }
+}
+.owl-theme .owl-dots, .owl-nav button {
+    margin-top: 30px;
+    @include respond-below(custom767) {
+        margin-top: 10px;
+    }
+}
+.custom-arrow {
+    @include transform(rotate(44deg));
+}
+.owl-nav button.owl-next {
+    margin-left: 20px;
+}

@@ -1,0 +1,97 @@
+.footer {
+    &.footer-two {
+        .footer-title {
+            color: $__sky__blue;
+            font-size: $__font__size__18;
+            margin-bottom: 10px;
+        }
+        .footer-widget {
+            &.footer-menu {
+                ul {
+                    li {
+                        a {
+                            font-size: $__font__size__13;
+                            padding-left: 0;
+                            &::before {
+                                display: $__none;
+                            }
+                            &:hover {
+                                letter-spacing: 0;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-widget {
+            .footer-logo {
+                margin-bottom: 10px;
+                img {
+                    width: 120px;
+                }
+            }
+            .footer-about-content {
+                p {
+                    font-size: $__font__size__13;
+                }
+            }
+        }
+        .footer-address p {
+            font-size: 13px;
+        }
+        .footer-contact-info {
+            font-size: $__font__size__13 !important;
+            .footer-address {
+                span {
+                    i {
+                        &.fa-map-marker-alt {
+                            font-size: $__font__size__16 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.footer-four {
+        .footer-top {
+            padding: 50px 0;
+            @include respond-below(custom767) {
+                padding: 30px 0 0;
+            }
+        }
+    }
+    &.footer-five {
+        background-color: $__blue__11;
+        .footer-top {
+            background-color: $__blue__11;
+            padding: 60px 0;
+            @include respond-below(custom991) {
+                padding: 40px 0 10px;
+            }
+        }
+        .footer-bottom {
+            .copyright {
+                border-top: 1px solid $__sky__03;
+            }
+        }
+    }
+    &.custom-footer {
+        .footer-top {
+            padding: 60px 0;
+            @include respond-below(custom767) {
+                padding: 40px 0 10px;
+            }
+        }
+        .footer-bottom {
+            .copyright {
+                border-top: 1px solid $__blue__12;
+            }
+        }
+        .copyright-text {
+            span {
+                color: $__sky__blue;
+            }
+        }
+    }
+}

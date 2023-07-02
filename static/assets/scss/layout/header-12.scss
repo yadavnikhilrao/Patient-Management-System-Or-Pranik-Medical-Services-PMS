@@ -1,0 +1,143 @@
+
+.header {
+    &.header-fourteen {
+        &.header-twelve {
+            .header-nav {
+                background-color: transparent;
+                border-bottom: none;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 0;
+                .logo {
+                    @include respond-below(custom1199) {
+                        margin-right: 0;
+                    }
+                }
+                @include respond-below(custom1199) {
+                    justify-content: start;
+                }
+                @include respond-below(custom991) {
+                    justify-content: space-between;
+                }
+                .main-menu-wrapper {
+                    @include respond-below(custom991) {
+                        background-color: $__ghost_white;
+                    }
+                    .main-nav {
+                        li {
+                            @include respond-below(custom1199) {
+                                margin-right: 10px;
+                            }
+                            @include respond-below(custom991) {
+                                border-bottom: 1px solid $__white;
+                            }
+                            a {
+                                color: $__midnight_black;
+                            }
+                            .submenu {
+                                @include respond-below(custom991) {
+                                    background-color: $__ghost_white;
+                                }
+                                a {
+                                    color: $__midnight_black;
+                                }
+                            }
+                            &.active {
+                                a {
+                                    color: $__blue__14;
+                                    font-weight: $__bold;
+                                }
+                                .submenu {
+                                    a {
+                                        color: $__midnight_black;
+                                        font-weight: $__medium;
+                                        &.active {
+                                            color: $__laysgreen;
+                                            font-weight: $__medium;
+                                            
+                                       }
+                                    }
+                                   
+                                    a {
+                                        color: $__midnight_black;  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .header-navbar-rht {
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        @include margin-padding(null, 0 10px 0 0);
+                        &.login-link { 
+                            display: none;
+                        }
+                        &.searchbar-fourteen {
+                            @extend %flex-align-center;
+                            background: $__lite__gray;
+                            border: 1px solid $__greymax;
+                            width: 38px;
+                            height: 38px;
+                            border-radius: 35px;
+                            @include margin-padding(null, 0);
+                            transition: 0.5s;
+                            &:hover {
+                                background: $__blue_color1;
+                                transition: 0.5s;
+                            }
+                            a {
+                                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
+                            }
+                        }
+                        &.login-in-fourteen {
+                            .reg-btn {
+                                background: transparent;
+                                color: $__midnight_black;
+                                box-shadow: none;
+                                border: none;
+                                font-size: $__font__size__15;
+                                font-weight: $__semibold;
+                                padding: 10px 12px;
+                                transition: 0.5s;
+                                @include respond-below(custom1199) {
+                                    padding: 10px 5px;
+                                }
+                                @include respond-below(custom991) {
+                                    padding: 10px 12px;
+                                }
+                                &:hover {
+                                    background: $__blue__14;
+                                    color: $__white;
+                                    transition: 0.5s;
+                                }
+                                &.reg-btn-fourteen {
+                                    background: $__blue__14;
+                                    color: $__white;
+                                    transition: 0.5s;
+                                    border: 1px solid $__blue__14;
+                                    font-size: $__font__size__15;
+                                    font-weight: $__semibold;
+                                    &:hover {
+                                        background: $__white;
+                                        color: $__blue__14;
+                                        transition: 0.5s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.header-fixed {
+            position: $__fixed;
+            display: $__block;
+            width: $__full__width;
+            z-index: 9999;
+            box-shadow: $__inherit;
+            // background: rgb(14, 130, 253);
+        }
+    }
+}

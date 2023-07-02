@@ -1,0 +1,73 @@
+
+
+.header-trans.header-eleven {
+    .header-nav {
+        border-bottom: 0;
+        .navbar-header {
+            @include respond-below (custom575) {
+                #mobile_btn {
+                    left: 15px;
+                }
+            }
+        }
+        .main-nav {
+            & > li {
+                @include respond-below (custom1199) {
+                    margin-right: 17px;
+                }
+                & > a {
+                    color: $__white;
+                }
+                &.has-submenu {
+                    &.active {
+                        & > a {
+                            color: $__light__celeste;
+                        }
+                    }
+                }
+                &.submenu {
+                    a {
+                        &:hover {
+                            color: $__light__celeste;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-navbar-rht {
+        li {
+            border-right: 0;
+            padding-right: 0;
+            a {
+                &.header-login {
+                    background: $__light__celeste;
+                    border-radius: 5px;
+                    font-size: $__font__size__16;
+                    font-weight: $__normal;
+                    padding: 13px 15px !important;
+                    text-transform: $__none;
+                    box-shadow: inset 0 0 0 0 $__white;
+                    @include transition(all 0.7s);
+                    &:hover {        
+                        background: $__white;
+                        color: $__blue_color1;
+                        box-shadow: inset 0 60px 0 0 $__white;
+                        @include transition(all 0.7s);
+                    }
+                    &.white-bg {
+                        color: $__blue_color1;
+                        box-shadow: inset 0 0 0 0 $__blue_color1;
+                        @include transition(all 0.7s);
+                        &:hover {        
+                            background: $__blue_color1;
+                            color: $__white;
+                            box-shadow: inset 0 60px 0 0 $__blue_color1;
+                            @include transition(all 0.7s);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

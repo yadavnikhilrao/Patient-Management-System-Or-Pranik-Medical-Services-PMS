@@ -1,0 +1,29 @@
+
+.footer-one {
+    &.footer-fourteen {
+        &.footer-twelve {
+            background: $__home__12__section__even;
+            padding:  0;
+            .footer-bottom {
+                .copyright {
+                    .policy-menu {
+                        @include respond-below(custom991) {
+                            text-align: start;
+                            li {
+                                margin-right: 4px;
+                                font-weight: 400;
+                                &::after {
+                                    left: 5px;
+                                }
+                                a {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+  }

@@ -1,0 +1,204 @@
+
+
+.footer {
+    &.footer-eleven {
+        background: $__dark_cyan;
+        .footer-top {
+            @include margin-padding(null, 50px 0 35px);   
+            .footer-title {
+                font-size: $__font__size__18;
+                font-weight: $__semibold;
+                @include margin-padding(0 0 10px, null);
+            }
+            .footer-content {
+                p {
+                    color: $__white;
+                    @include margin-padding(0 0 25px, null);
+                }
+            }
+            .subscribe-form {
+                margin-bottom: 25px;
+                .form-control {
+                    min-height: 59px;                
+                    @include margin-padding(0, 10px 112px 10px 15px);
+                    border-radius: 10px;
+                    &::placeholder {
+                        color: $__grey_shase;
+                    }
+                }
+                .btn {
+                    margin-right: 10px;
+                    border-radius: 10px;
+                    font-size: $__font__size__16;
+                    font-weight: $__normal;
+                    @include margin-padding(null, 6px 23px);
+                }
+            }
+            .footer-payment {
+                @include respond-below (custom767) {
+                    @include margin-padding(0 0 15px 0, null);
+                }
+                h6 {
+                    font-size: $__font__size__16;
+                    @include margin-padding(0 0 15px, null);
+                    color: $__white;
+                }
+            }
+        }
+        .footer-bottom {
+            .copyright {
+                border-top: 1px solid $__lightblue_shade;
+                @include margin-padding(null, 25px 0);
+                .copyright-text {
+                    p {
+                        font-size: $__font__size__14;
+                        font-weight: $__medium;
+                        margin-bottom: 0;
+                        @include respond-below (custom767) {
+                            margin-bottom: 10px;
+                        }
+                        a {
+                            color: $__light__celeste;
+                        }
+                    }
+                }
+                .policy-menu {
+                    li {
+                        font-size: $__font__size__16;
+                        @include respond-below (custom575) {
+                            margin: 0 10px 10px 0;
+                        }
+                        &::after {
+                            color: rgba(255, 255, 255, 0.15);
+                        }
+                        a {                            
+                            &:hover {
+                                color: $__light__celeste;
+                            }
+                        }                        
+                        @include respond-below(custom1399) {
+                            font-size: $__font__size__15;
+                        }
+                    }
+                }
+            }
+        }
+        .social-icon {
+            @include margin-padding(0 0 25px, null);
+            ul {
+                list-style: $__none;
+                @include margin-padding(0, 0);
+                text-align: $__right;
+                @include respond-below(custom767) {
+                    text-align: $__left !important;
+                }
+                li {
+                    display: $__inline__block;
+                    @include margin-padding(0 20px 0 0, null);
+                    a {
+                        color: $__white;
+                        font-size: $__font__size__20;
+                        &:hover {
+                            color: $__light__celeste;
+                        }
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .footer-widget {
+            &.footer-menu {
+                @include margin-padding(0 0 25px, null);
+                ul {
+                    list-style: $__none;
+                    @include margin-padding(0, 0);
+                    li {
+                        display: $__inline__block;
+                        @include margin-padding(0 45px 0 0, null);       
+                        @include respond-below (custom991) {
+                            @include margin-padding(0 9px 0 0, null);       
+                        } 
+                        @include respond-below (custom575) {
+                            @include margin-padding(0 10px 10px 0, null);       
+                        }        
+                        a {
+                            font-size: $__font__size__16;
+                            padding-left: 0;
+                            color: $__white;
+                            &:hover {
+                                color: $__light__celeste;
+                            }
+                            &::before {
+                                content: $__none !important;
+                            }
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-language {
+    position: $__relative;
+    width: 173px;
+    float: $__right;
+    @include respond-below (custom767) {
+        float: $__left !important;
+    }
+    .select2-container {
+        .select2-selection--single {
+            border: 1px solid $__white;
+            background-color: $__transparent;
+            border-radius: 10px;
+            height: 44px;
+            .select2-selection__rendered {
+                padding-left: 34px;
+                color: $__white;
+            }
+        }
+    }
+    .icon-lang {
+        @include position($__absolute, 50%, null, null, 10px);
+        @include transform(translateY(-50%));
+        color: $__white;
+        line-height: 0;
+    }
+}
+.footer-contacts {
+    @include margin-padding(0 0 26px, null);
+    .footer-wrap {
+        background: rgba(240, 244, 246, 0.16);
+        backdrop-filter: blur(50px);
+        border-radius: 10px;
+        @include margin-padding(0 0 24px, 15px);
+        @extend %flex__center;
+        .footer-icon {
+            width: 55px;
+            height: 55px;
+            background: $__white;
+            border-radius: 100px;
+            @extend %flex-align-center;
+            @include margin-padding(0 15px 0 0, null);
+            flex-shrink: 0;
+            color: $__cyan_color;
+            font-size: $__font__size__24;
+        }
+        .footer-info {
+            h6 {
+                font-size: $__font__size__16;
+                font-weight: $__semibold;
+                color: $__white;
+                @include margin-padding(0 0 10px, null);
+            }
+            p {
+                @include margin-padding(0, null);
+                color: $__white;
+            }
+        }
+    }
+}
