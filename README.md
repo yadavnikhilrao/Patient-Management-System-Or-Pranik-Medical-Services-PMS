@@ -28,7 +28,10 @@ The primary objective of the Patient Management System is to improve the patient
 - **Responsive Design:** The platform is designed with a responsive layout, ensuring a seamless and consistent user experience across different devices. Whether accessed from a desktop, laptop, tablet, or mobile phone, the system adapts to the screen size and provides optimal usability.
 
 ## Screenshots
-![Screenshot 1](path_to_screenshot_1.png)
+
+### Home Page
+![Home Page](./static/assets/img/home.jpeg)
+
 ![Screenshot 2](path_to_screenshot_2.png)
 ![Screenshot 3](path_to_screenshot_3.png)
 
@@ -39,7 +42,7 @@ The primary objective of the Patient Management System is to improve the patient
 ## Usage
 1. Run the application: `python app.py`
 2. Access the application in your web browser at: `http://localhost:5000`
-3. Live Demo: [https://pranik.pythonanywhere.com/](https://pranikmedicalservices.pythonanywhere.com/)
+3. Live Demo: [https://pranikmedicalservices.pythonanywhere.com/](https://pranikmedicalservices.pythonanywhere.com/)
 
 ## Contributing
 We welcome contributions from the community to enhance the Patient Management System. If you'd like to contribute, please submit your pull requests.
